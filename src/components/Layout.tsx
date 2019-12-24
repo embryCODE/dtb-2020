@@ -10,6 +10,7 @@ import { useStaticQuery, graphql } from 'gatsby'
 
 import Header from './Header'
 import './layout.css'
+import { Box } from '@theme-ui/components'
 
 const Layout: React.FC = ({ children }) => {
   const data = useStaticQuery(graphql`
@@ -24,6 +25,17 @@ const Layout: React.FC = ({ children }) => {
 
   return (
     <>
+      <Box bg="background">
+        <Box
+          color="text"
+          m="0 auto"
+          px="1.0875rem"
+          py={3}
+          sx={{ maxWidth: 960 }}
+        >
+          Testing 123
+        </Box>
+      </Box>
       <Header siteTitle={data.site.siteMetadata.title} />
       <div
         style={{
