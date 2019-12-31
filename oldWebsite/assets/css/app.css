@@ -1,0 +1,2269 @@
+/*!
+ * Roots 6.5.0
+ */
+
+
+/* ==========================================================================
+   Base
+   ========================================================================== */
+
+* { padding:0; margin:0; outline:0; }
+html {padding-bottom:0px!important;}
+
+/* declare some fonts yo */
+@font-face {
+    font-family: 'caviar_dreamsregular';
+    src: url('../fonts/CaviarDreams-webfont.eot');
+    src: url('../fonts/CaviarDreams-webfont_.eot#iefix') format('embedded-opentype'),
+         url('../fonts/CaviarDreams-webfont.woff') format('woff'),
+         url('../fonts/CaviarDreams-webfont.ttf') format('truetype'),
+         url('../fonts/CaviarDreams-webfont.svg#caviar_dreamsregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'caviar_dreamsbold';
+    src: url('../fonts/Caviar_Dreams_Bold-webfont.eot');
+    src: url('../fonts/Caviar_Dreams_Bold-webfont_.eot#iefix') format('embedded-opentype'),
+         url('../fonts/Caviar_Dreams_Bold-webfont.woff') format('woff'),
+         url('../fonts/Caviar_Dreams_Bold-webfont.ttf') format('truetype'),
+         url('../fonts/Caviar_Dreams_Bold-webfont.svg#caviar_dreamsbold') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'caviar_dreamsbold_italic';
+    src: url('../fonts/CaviarDreams_BoldItalic-webfont.eot');
+    src: url('../fonts/CaviarDreams_BoldItalic-webfont_.eot#iefix') format('embedded-opentype'),
+         url('../fonts/CaviarDreams_BoldItalic-webfont.woff') format('woff'),
+         url('../fonts/CaviarDreams_BoldItalic-webfont.ttf') format('truetype'),
+         url('../fonts/CaviarDreams_BoldItalic-webfont.svg#caviar_dreamsbold_italic') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'caviar_dreamsitalic';
+    src: url('../fonts/CaviarDreams_Italic-webfont.eot');
+    src: url('../fonts/CaviarDreams_Italic-webfont_.eot#iefix') format('embedded-opentype'),
+         url('../fonts/CaviarDreams_Italic-webfont.woff') format('woff'),
+         url('../fonts/CaviarDreams_Italic-webfont.ttf') format('truetype'),
+         url('../fonts/CaviarDreams_Italic-webfont.svg#caviar_dreamsitalic') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+body {
+	background:#000 url(../img/bg.jpg) top center fixed no-repeat;
+	margin: 0 auto;
+	font-family: 'caviar_dreamsregular';
+	color:#fff;
+	font-size:24px;
+	}
+
+
+.container {  }
+.wrap { max-width: 1170px; }
+
+/* ==========================================================================
+   Header
+   ========================================================================== */
+
+.small-header-contact {font-family:Arial, Helvetica, sans-serif;color:#555;}
+.center-col {text-align:right!important;}
+
+header { width: 100%; }
+
+.banner { width: 100%; background: #000; }
+
+.banner .container { text-align:center; width:100%; max-width:100%; }
+.banner .container ul, .about-sub-menu{ display:inline-block; margin:0 auto; float:none; }
+.banner .container ul li a, .about-sub-menu li a { background: #000; font-family: 'caviar_dreamsregular'; color: #fff; font-size: 22px; font-weight: 100; text-transform: uppercase; }
+.banner .container ul li + li, .about-sub-menu li + li { background: url(../img/nav-vert-divider.png) no-repeat 0 center; margin-left: 1px; }
+.banner .container ul li a:hover, .about-sub-menu li a:hover { color:rgb(0,180,230); }
+.banner .container ul li.active a { background: transparent; color:rgb(0,180,230); }
+.banner .container ul li.active a:hover { background: transparent; color:rgb(0,180,230); }
+.banner .container ul li.menu-contact a { background-color:#45154b; color:#bc8cbf; border: 1px solid #2a2a2a; -webkit-border-radius: 8px; -moz-border-radius: 8px; -o-border-radius: 8px; border-radius: 8px; }
+.banner .container ul li.menu-contact a:hover { background-color:#501858; border: 1px solid #413f41; color:#fff; }
+
+.about-sub-menu{
+  list-style: none;
+  margin: 0 auto !important;
+  display: block;
+  width: inherit;
+}
+
+.about-sub-menu li{
+  display: inline-block;
+  padding: 5px;
+}
+.about-sub-menu li a{
+  padding: 10px;
+  display: block;
+}
+.collapsed i.fa.fa-minus-circle:before{
+  content: "\f055" !important;
+}
+#pagetop { background: url(../img/left-tile.jpg) repeat-x; margin:0 auto; }
+#pagetop img { max-width:1161px; height:auto; }
+
+.navbar-default { border-color: rgb(0, 0, 0); }
+
+.navbar-toggle {
+position: relative;
+float: none;
+padding: 9px 10px;
+margin-top: 8px;
+margin-right: 0px;
+margin-bottom: 8px;
+background-color: #111;
+border: 1px solid #333;
+border-radius: 4px;
+width: 70%;
+color:#FFF;
+}
+
+.navbar-toggle:hover {
+	background-color:#333;
+}
+
+.navbar-default .navbar-toggle {
+  border-color: #333;
+}
+
+nav.collapse.navbar-collapse.affix {
+  top: 0px !important;
+  z-index: 100000!important;
+  width: 100%;
+  padding: 0px !important;
+  background: #000;
+  margin: 0 -15px;
+}
+.affix .nav.navbar-nav a {
+  padding: 0px;
+  font-size: 16px;
+  transition: font-size .5s ease;
+  transition: padding .5s ease;
+}
+.nav.navbar-nav a {
+  transition: font-size .5s ease;
+  transition: padding .5s ease;
+}
+/* ==========================================================================
+   Content
+   ========================================================================== */
+
+.content { }
+
+h1, h2, h3, h4, h5 {
+font-family: 'caviar_dreamsbold';
+}
+
+img {
+max-width:100%;
+height:auto;
+}
+
+.clicker a {
+	color: #FFF;
+	text-decoration:none;
+	padding-top:20px;
+}
+
+.clicker a:hover {
+	color: #00AEE6;
+	text-decoration:none;
+}
+
+.clicker {
+	padding-top:10px;
+	margin-top:5px;
+}
+
+body.video {padding:0px!important;}
+
+.row .videos {
+	padding:20px;
+}
+
+.main ul {font-family:arial, helvetica, sans-serif;color:#ababab;}
+
+
+/* ==========================================================================
+   Primary Content
+   ========================================================================== */
+
+.main { font-size:14px; }
+.main {background: #000;}
+.main p {font-family: Verdana; color:#ababab;}
+.home .main {background:transparent;}
+.home .main p { background-color: rgb(0,0,0); padding:20px; font-size: 24px; font-family: 'caviar_dreamsregular'; color: #fff;}
+.home .page-header { display:none; }
+
+.home .main .col-md-6 { font-size: 28px; }
+ .main .bigctb { background:transparent; display:block; margin-top: 35px; font-family:'Times New Roman'; font-size:56px; letter-spacing:8px; font-style:italic; }
+ .main .bigctb a { text-align:center; padding:10px 30px; margin:30px 40px; display:block; background-color:#45154b; color:#fff; border: 1px solid #3c3c3c; -webkit-border-radius: 8px; -moz-border-radius: 8px; -o-border-radius: 8px; border-radius: 8px; -webkit-box-shadow: 0 1px 5px rgba(255,223,0,.1); -moz-box-shadow: 0 1px 5px rgba(255,223,0,.1); -o-box-shadow: 0 1px 5px rgba(255,223,0,.1); box-shadow: 0 1px 5px rgba(255,223,0,.1); }
+ .main .bigctb a:hover { text-decoration:none; background-color:#501858; border: 1px solid #413f41; }
+
+ .main .bigctbtab { background:transparent; display:block; font-family:'Times New Roman'; font-size:47px; margin: 15px 0px; letter-spacing:8px; font-style:italic; }
+ .main .bigctbtab a { text-align:center; padding:10px 30px; display:block; margin: 15px 0px; background-color:#45154b; color:#fff; border: 1px solid #3c3c3c; -webkit-border-radius: 8px; -moz-border-radius: 8px; -o-border-radius: 8px; border-radius: 8px; -webkit-box-shadow: 0 1px 5px rgba(255,223,0,.1); -moz-box-shadow: 0 1px 5px rgba(255,223,0,.1); -o-box-shadow: 0 1px 5px rgba(255,223,0,.1); box-shadow: 0 1px 5px rgba(255,223,0,.1); }
+ .main .bigctbtab a:hover { text-decoration:none; background-color:#501858; border: 1px solid #413f41; }
+
+
+.main h3 {
+margin-top: 40px;
+margin-bottom: 20px;
+}
+
+.main h4 {
+font-family: 'caviar_dreamsitalic';
+color: rgb(0,180,230);
+margin: 60px 0px 20px 0px;
+}
+
+.main ul {margin-left:30px;}
+.home .main ul {margin-left:0px;}
+
+.page-header {
+padding-bottom: 9px;
+margin: 0px 0 20px;
+border-bottom: 1px solid #eee;
+}
+
+#quickcontact {
+font-size: 11px;
+font-weight: bold;
+padding: 10px;
+text-align: center;
+background: #f8f8f8;
+color: #000;
+}
+
+.black-bg {
+	background:#000;
+	padding: 15px;
+}
+
+
+/* Gallery Shortcode */
+.gallery-row { padding: 15px 0; }
+
+/* Testimonials */
+#testimonials { float: left; }
+#testimonials ul li { list-style-type: none; text-align:center; font-size: 14px; margin:0 0 20px 0; padding:20px 0 ; width:100%; clear:right; background: #000; }
+#testimonials ul li span { text-transform:uppercase; }
+#testimonials ul li h4 { height: 55px; background: url(../img/fill.png) no-repeat bottom center; color:rgb(0,180,230); text-transform:uppercase; font-size: 18px; margin:10px 0px;}
+#testimonials ul li p { font-family: Verdana; color:#ababab; margin-top:-10px; padding:0 20px; width:100%; font-size: 14px; }
+#testimonials ul li .lq { width:11px height:7px; background: url(../img/quote-open.jpg) no-repeat 0 0; position:relative; padding: 0 10px 0 0; }
+#testimonials ul li .rq { width:11px height:7px; background: url(../img/quote-closed.jpg) no-repeat 0 0; position:relative; padding: 0 15px 0 0; }
+
+/* Notables */
+#notables, #notables-sm { text-align: center; }
+#notables ul {
+  list-style: none;
+}
+#celebs, #corps, #celebs ul{
+  background: #000;
+  padding: 15px;
+  font-family: 'caviar_dreamsbold';
+  text-align: center;
+}
+#celebs h3 { margin-top: 0px; }
+#celebs ul {  }
+#celebs ul li { font-family: inherit; display:inline;  margin: 15px; font-size:32px; text-transform:uppercase; }
+#celebs ul li + li { background: url(../img/nav-vert-divider.png) no-repeat 0 center; margin-left: 1px; padding-left:30px; }
+#celebs ul li a:hover { text-decoration:none; color:#adadad; }
+
+#notables-sm #celebs ul li {display: block; margin: 10px; font-size: 16px; text-transform: uppercase;}
+#notables-sm #celebs ul li + li { background: none; padding-left:0px;}
+
+#corps h3 { margin-top: 0px ;}
+#corps img { max-height:80px; width: auto; height: auto; display:inline; padding:10px 0; }
+#corps ul { list-style-type:none; }
+#corps ul li { display:inline;  margin: 15px; font-size:32px; }
+
+#logos img { max-height:80px; width: auto; height: auto; display:inline; padding:10px 0; }
+#logos ul { list-style-type:none; }
+#logos ul li { display:inline;  margin: 15px; font-size:32px; }
+
+/* WPCF7 Contact Form */
+#toggle { background-color:rgba(0,0,0,0.4); border:none; text-align:center; -webkit-border-radius: 2px; -moz-border-radius: 2px; -o-border-radius: 2px; border-radius: 2px; -webkit-box-shadow: 0 1px 4px rgba(0,0,0,.2); -moz-box-shadow: 0 1px 4px rgba(0,0,0,.2); -o-box-shadow: 0 1px 4px rgba(0,0,0,.2); box-shadow: 0 1px 4px rgba(0,0,0,.2); margin-bottom:10px; margin-top:10px; }
+#toggle ul div { display: none; text-decoration: none; }
+#toggle li { list-style-type:none; cursor:pointer;  }
+#toggle li div:hover{text-decoration:none !important; }
+#toggle li:before {content: "+"; padding:10px 10px 10px 0; color:#FFF; font-weight:bold;}
+#toggle li.active:before {content: "-"; padding:10px 10px 10px 0; color:#FFF; font-weight:bold; }
+.contactbook { text-align:center; }
+.contactbook h3 { font-family:'Times New Roman'; margin-bottom:0; font-size:36px; }
+.wpcf7 { text-align: center; }
+.wpcf7 p { background:transparent; }
+.wpcf7 input { height:40px; }
+.wpcf7 input, .wpcf7 textarea { background-color:rgba(255,255,255,0.2); color:#fff; border:none; margin:10px; text-align:center; -webkit-border-radius: 2px; -moz-border-radius: 2px; -o-border-radius: 2px; border-radius: 2px; -webkit-box-shadow: 0 1px 4px rgba(0,0,0,.2); -moz-box-shadow: 0 1px 4px rgba(0,0,0,.2); -o-box-shadow: 0 1px 4px rgba(0,0,0,.2); box-shadow: 0 1px 4px rgba(0,0,0,.2); }
+.wpcf7 .wpcf7-submit { background-color:#45154b; color:#bc8cbf; border: 1px solid #2a2a2a; -webkit-border-radius: 8px; -moz-border-radius: 8px; -o-border-radius: 8px; border-radius: 8px; padding: 3px 5px 5px 5px; }
+.wpcf7 .wpcf7-submit:hover { background-color:#501858; border: 1px solid #413f41; color:#fff; }
+wpcf7-response-output {
+}
+
+/* ==========================================================================
+   Sidebar
+   ========================================================================== */
+
+.sidebar { }
+
+.widget {margin-bottom:60px;}
+
+/* ==========================================================================
+   Posts
+   ========================================================================== */
+
+.hentry header { }
+.hentry time { }
+.hentry .byline { }
+.hentry .entry-content { }
+.hentry footer { }
+
+
+/* ==========================================================================
+   Splash
+   ========================================================================== */
+  .page-template-template-splash .footer-nav {
+    display: none;
+  }
+.page-template-template-splash ul{
+  margin-left: 0px !important;
+}
+  #testimonials ul{
+    margin-left: 0px !important;
+  }
+  #return-tab{
+    top: 45px;
+    left: 0px;
+    position: fixed;
+    text-align: center;
+  padding: 10px 30px;
+  margin: 30px 40px;
+  display: block;
+  background-color: #45154b;
+  color: #fff;
+  border: 1px solid #3c3c3c;
+  -webkit-border-radius: 8px;
+  -moz-border-radius: 8px;
+  -o-border-radius: 8px;
+  border-radius: 8px;
+  -webkit-box-shadow: 0 1px 5px rgba(255,223,0,.1);
+  -moz-box-shadow: 0 1px 5px rgba(255,223,0,.1);
+  -o-box-shadow: 0 1px 5px rgba(255,223,0,.1);
+  box-shadow: 0 1px 5px rgba(255,223,0,.1);
+  z-index: 1000;
+  }
+
+  #return-tab a{
+    color: #fff !important;
+  }
+
+  /* ==========================================================================
+     Promotion Page
+     ========================================================================== */
+
+     .page-template-template-splash-new #menu-primary-navigation {
+       display:none !important;
+     }
+
+     .page-template-template-splash-new #quickcontact {
+     display:none !important;}
+
+     .page-template-template-splash-new .wrap.container {
+     display:none !important;}
+
+     .page-template-template-splash-new .content-info {
+     display:none !important;}
+
+     .page-template-template-splash-new .banner .container ul li a, .about-sub-menu li a {
+        display:none !important;
+      }
+     .page-template-template-splash-new #pagetop{
+	overflow: hidden;
+	}
+	.page-template-template-splash-new .banner.navbar.navbar-default{
+		margin-bottom: 0px;
+	}
+
+
+=======
+/* ==========================================================================
+   Footer
+   ========================================================================== */
+
+footer { width:100%; }
+
+footer .container {
+	margin: 0 auto;
+	text-align: center;
+}
+
+.content-info {
+	height:180px;
+	background-color:#000;
+}
+
+.content-info .footer-nav { padding-top:20px; }
+.content-info ul { list-style:none; margin:0 auto; display:inline-block; }
+.content-info ul li a { background: #000; font-family: 'caviar_dreamsregular'; color: #fff; font-size: 16px; font-weight: normal; text-transform: uppercase; }
+.content-info ul li { float: left; padding: 11px; }
+.content-info ul li + li { background: url(../img/nav-vert-divider.png) no-repeat 0 center; margin-left: 1px; }
+.content-info ul li a:hover { color:rgb(0,180,230); text-decoration:none; }
+.content-info ul li.active a { background: transparent; color:rgb(0,180,230); }
+.content-info ul li.active a:hover { background: transparent; color:rgb(0,180,230); }
+
+#social ul li + li { background-image:none; }
+#social ul {margin:0px; padding:0px; list-style: none; display:inline-block; }
+#social li {margin:0px; padding: 0px list-style:none; display: block; float:left;}
+#social li a {padding: 10px; font-size: 0; line-height: 0; text-indent: -4000px; line-height: 0;}
+
+#social li.menu-twitter a { background: url(../img/tw.jpg) no-repeat 0 center; }
+#social li.menu-facebook a { background: url(../img/fb.jpg) no-repeat 0 center; }
+#social li.menu-linkedin a { background: url(../img/li.jpg) no-repeat 0 center; }
+#social li.menu-youtube a { background: url(../img/yt.jpg) no-repeat 0 center; }
+#social li.menu-wedding-wire a { background: url(../img/ww.jpg) no-repeat 0 center; }
+
+.credits { font-size: 12px; }
+
+
+
+span.wpcf7-not-valid-tip {
+position: absolute;
+top: 0%;
+left: 20%;
+z-index: 100;
+background: #fff;
+border: 1px solid #ff0000;
+font-size: 12pt;
+width: 280px;
+padding: 2px;
+color: #000;
+}
+
+
+
+/* ==========================================================================
+   WordPress Generated Classes
+   See: http://codex.wordpress.org/CSS#WordPress_Generated_Classes
+   ========================================================================== */
+
+.aligncenter { display: block; margin: 0 auto; }
+.alignleft { float: left; }
+.alignright { float: right; }
+figure.alignnone { margin-left: 0; margin-right: 0; }
+
+
+
+/* ==========================================================================
+   Media Queries
+   ========================================================================== */
+
+/* Extra small devices (phones, up to 480px) */
+/* No media query since this is the default in Bootstrap */
+
+@media (max-width:480px ){
+.home .main .bigctbtab {
+	font-size:20px;
+}
+
+.center-col {text-align:center;}
+
+body {
+	background:#222;
+	margin:0;
+	padding:0;
+	overflow-x: hidden;
+}
+
+/* Footer */
+.content-info {
+	height: auto;
+}
+
+.content-info ul li {
+	padding: 6px;
+	font-size: 5px;
+	page-break-after:always;
+}
+
+.content-info .footer-nav { padding-top:5px; }
+.content-info ul { list-style:none; margin:0 auto; }
+.content-info ul li a { background: transparent; font-family: 'caviar_dreamsregular'; color: #fff; font-size: 18px; font-weight: normal; text-transform: uppercase;width:100%;}
+.content-info ul li { float:none!important; padding: 9px; }
+.content-info ul li + li {background: none; margin-left: 2px; }
+.content-info ul li a:hover { color:rgb(0,180,230); text-decoration:none; }
+.content-info ul li.active a { background: transparent; color:rgb(0,180,230); }
+.content-info ul li.active a:hover { background: transparent; color:rgb(0,180,230); }
+
+#social li {
+	display:inline!important;
+	margin:10px;
+	padding:10px;
+}
+
+.credits {padding-top:20px;}
+
+/* Pages */
+.main {
+	padding-top: 10px;
+}
+
+.main h3 {font-weight:100;}
+
+.page-header {border:none!important;text-align:center;}
+
+}
+
+@media (max-width:767px ){
+
+body {
+	padding-right:0!important;
+	padding-left:0!important;
+}
+
+html {
+	padding-right:0!important;
+	padding-left:0!important;
+	overflow-x: hidden;
+}
+
+.center-col {text-align:center;}
+
+.wpcf7 input, .wpcf7 textarea {width: 95%; font-size:13px;}
+
+.bigctbtab{
+  display: block!important;
+  margin: 0px!important;
+}
+
+.bigctbtb a{
+  font-size: 1em;
+}
+.bigctb{
+  display: none!important;
+}
+
+
+
+}
+/* Small devices (tablets, 768px and up) */
+@media (min-width: 768px) {
+
+  #notables, #notables-sm { text-align: center; padding:30px 50px; }
+
+body {
+	padding-right:0!important;
+	padding-left:0!important;
+}
+
+html {
+	padding-right:0!important;
+	padding-left:0!important;
+}
+
+.center-col {text-align:center;}
+
+.main p { font-size:16px; }
+
+/*.banner .container ul li {
+padding: 11px 3px;
+}
+
+/*content Button*/
+.bigctb{
+  display: none!important;
+}
+.bigctbtab{
+  display: block!important;
+  margin: 0px!important;
+}
+
+/* nav bar */
+.banner .container {
+	padding-top:5px;
+}
+
+.banner .container ul li {
+	padding: none!important;
+	margin: 0 1px!important;
+}
+
+.banner .container a {
+	font-size:6px;
+}
+
+}
+
+/* Medium devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+
+.center-col {text-align:center;}
+
+.banner .container ul li {
+padding: 11px 15px;
+}
+
+.bigctb{
+  display: block!important;
+}
+.bigctbtab{
+  display: none!important;
+}
+
+#quickcontact .col-md-8 {text-align:left;}
+#quickcontact .col-md-4 {text-align:right;}
+#quickcontact .row {max-width: 1170px; margin: 0px auto;}
+
+
+}
+
+/* Large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {
+
+.center-col {text-align:center;}
+
+.banner .container ul li {
+padding: 11px 25px;
+}
+
+
+}
+
+
+
+/*
+ * jQuery FlexSlider v2.2.0
+ * http://www.woothemes.com/flexslider/
+ *
+ * Copyright 2012 WooThemes
+ * Free to use under the GPLv2 license.
+ * http://www.gnu.org/licenses/gpl-2.0.html
+ *
+ * Contributing author: Tyler Smith (@mbmufffin)
+ */
+
+
+/* Browser Resets
+*********************************/
+.flex-container a:active,
+.flexslider a:active,
+.flex-container a:focus,
+.flexslider a:focus  {outline: none;}
+.slides,
+.flex-control-nav,
+.flex-direction-nav {margin: 0; padding: 0; list-style: none;}
+
+/* Icon Fonts
+*********************************/
+/* Font-face Icons */
+@font-face {
+	font-family: 'flexslider-icon';
+	src:url('../fonts/flexslider-icon.eot');
+	src:url('../fonts/flexslider-icon_.eot#iefix') format('embedded-opentype'),
+		url('../fonts/flexslider-icon.woff') format('woff'),
+		url('../fonts/flexslider-icon.ttf') format('truetype'),
+		url('../fonts/flexslider-icon.svg#flexslider-icon') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+/* FlexSlider Necessary Styles
+*********************************/
+.flexslider {margin: 0; padding: 0;}
+.flexslider .slides > li {display: none; -webkit-backface-visibility: hidden;} /* Hide the slides before the JS is loaded. Avoids image jumping */
+.flexslider .slides img {width: 100%; display: block;}
+.flex-pauseplay span {text-transform: capitalize;}
+
+/* Clearfix for the .slides element */
+.slides:after {content: "\0020"; display: block; clear: both; visibility: hidden; line-height: 0; height: 0;}
+html[xmlns] .slides {display: block;}
+* html .slides {height: 1%;}
+
+/* No JavaScript Fallback */
+/* If you are not using another script, such as Modernizr, make sure you
+ * include js that eliminates this class on page load */
+.no-js .slides > li:first-child {display: block;}
+
+/* FlexSlider Default Theme
+*********************************/
+.flexslider { margin: 0 0 5px; background: #000; border: 0px solid #fff; position: relative; -webkit-border-radius: 4px; -moz-border-radius: 4px; -o-border-radius: 4px; border-radius: 4px; -webkit-box-shadow: 0 1px 4px rgba(0,0,0,.2); -moz-box-shadow: 0 1px 4px rgba(0,0,0,.2); -o-box-shadow: 0 1px 4px rgba(0,0,0,.2); box-shadow: 0 1px 4px rgba(0,0,0,.2); zoom: 1; }
+.flex-viewport { max-height: 2000px; -webkit-transition: all 1s ease; -moz-transition: all 1s ease; -o-transition: all 1s ease; transition: all 1s ease; }
+.loading .flex-viewport { max-height: 300px; }
+.flexslider .slides { zoom: 1; }
+.carousel li { margin-right: 5px; }
+
+/* Direction Nav */
+.flex-direction-nav {*height: 0;}
+.flex-direction-nav a  { display: block; width: 40px; height: 40px; margin: -20px 0 0; position: absolute; top: 50%; z-index: 10; overflow: hidden; opacity: 0; cursor: pointer; color: rgba(0,0,0,0.8); text-shadow: 1px 1px 0 rgba(255,255,255,0.3); -webkit-transition: all .3s ease; -moz-transition: all .3s ease; transition: all .3s ease; }
+.flex-direction-nav .flex-prev { left: -50px; }
+.flex-direction-nav .flex-next { right: -50px; text-align: right; }
+.flexslider:hover .flex-prev { opacity: 0.7; left: 10px; }
+.flexslider:hover .flex-next { opacity: 0.7; right: 10px; }
+.flexslider:hover .flex-next:hover, .flexslider:hover .flex-prev:hover { opacity: 1; }
+.flex-direction-nav .flex-disabled { opacity: 0!important; filter:alpha(opacity=0); cursor: default; }
+.flex-direction-nav a:before  { font-family: "flexslider-icon"; font-size: 40px; display: inline-block; content: '\f001'; }
+.flex-direction-nav a.flex-next:before  { content: '\f002'; }
+
+/* Pause/Play */
+.flex-pauseplay a { display: block; width: 20px; height: 20px; position: absolute; bottom: 5px; left: 10px; opacity: 0.8; z-index: 10; overflow: hidden; cursor: pointer; color: #000; }
+.flex-pauseplay a:before  { font-family: "flexslider-icon"; font-size: 20px; display: inline-block; content: '\f004'; }
+.flex-pauseplay a:hover  { opacity: 1; }
+.flex-pauseplay a.flex-play:before { content: '\f003'; }
+
+/* Control Nav */
+.flex-control-nav {width: 100%; position: absolute; bottom: -40px; text-align: center;}
+.flex-control-nav li {margin: 0 6px; display: inline-block; zoom: 1; *display: inline;}
+.flex-control-paging li a {width: 11px; height: 11px; display: block; background: #666; background: rgba(0,0,0,0.5); cursor: pointer; text-indent: -9999px; -webkit-border-radius: 20px; -moz-border-radius: 20px; -o-border-radius: 20px; border-radius: 20px; -webkit-box-shadow: inset 0 0 3px rgba(0,0,0,0.3); -moz-box-shadow: inset 0 0 3px rgba(0,0,0,0.3); -o-box-shadow: inset 0 0 3px rgba(0,0,0,0.3); box-shadow: inset 0 0 3px rgba(0,0,0,0.3); }
+.flex-control-paging li a:hover { background: #333; background: rgba(0,0,0,0.7); }
+.flex-control-paging li a.flex-active { background: #000; background: rgba(0,0,0,0.9); cursor: default; }
+
+.flex-control-thumbs {margin: 5px 0 0; position: static; overflow: hidden;}
+.flex-control-thumbs li {width: 25%; float: left; margin: 0;}
+.flex-control-thumbs img {width: 100%; display: block; opacity: .7; cursor: pointer;}
+.flex-control-thumbs img:hover {opacity: 1;}
+.flex-control-thumbs .flex-active {opacity: 1; cursor: default;}
+
+@media screen and (max-width: 860px) {
+  .flex-direction-nav .flex-prev { opacity: 1; left: 10px;}
+  .flex-direction-nav .flex-next { opacity: 1; right: 10px;}
+}
+
+
+/* ==========================================================================
+   Video-js.css
+   ========================================================================== */
+
+   /*!
+Video.js Default Styles (http://videojs.com)
+Version 4.2.2
+Create your own skin at http://designer.videojs.com
+*/
+/* SKIN
+================================================================================
+The main class name for all skin-specific styles. To make your own skin,
+replace all occurances of 'vjs-default-skin' with a new name. Then add your new
+skin name to your video tag instead of the default skin.
+e.g. <video class="video-js my-skin-name">
+*/
+.vjs-default-skin {
+  color: #cccccc;
+}
+/* Custom Icon Font
+--------------------------------------------------------------------------------
+The control icons are from a custom font. Each icon corresponds to a character
+(e.g. "\e001"). Font icons allow for easy scaling and coloring of icons.
+*/
+@font-face {
+  font-family: 'VideoJS';
+  src: url('../fonts/vjs.eot');
+  src: url('../fonts/vjs_.eot#iefix') format('embedded-opentype'),
+  url('../fonts/vjs.woff') format('woff'),
+  url('../fonts/vjs.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+/* Base UI Component Classes
+--------------------------------------------------------------------------------
+*/
+/* Slider - used for Volume bar and Seek bar */
+.vjs-default-skin .vjs-slider {
+  /* Replace browser focus hightlight with handle highlight */
+  outline: 0;
+  position: relative;
+  cursor: pointer;
+  padding: 0;
+  /* background-color-with-alpha */
+  background-color: #333333;
+  background-color: rgba(51, 51, 51, 0.9);
+}
+.vjs-default-skin .vjs-slider:focus {
+  /* box-shadow */
+  -webkit-box-shadow: 0 0 2em #ffffff;
+  -moz-box-shadow: 0 0 2em #ffffff;
+  box-shadow: 0 0 2em #ffffff;
+}
+.vjs-default-skin .vjs-slider-handle {
+  position: absolute;
+  /* Needed for IE6 */
+  left: 0;
+  top: 0;
+}
+.vjs-default-skin .vjs-slider-handle:before {
+  content: "\e009";
+  font-family: VideoJS;
+  font-size: 1em;
+  line-height: 1;
+  text-align: center;
+  text-shadow: 0em 0em 1em #fff;
+  position: absolute;
+  top: 0;
+  left: 0;
+  /* Rotate the square icon to make a diamond */
+  /* transform */
+  -webkit-transform: rotate(-45deg);
+  -moz-transform: rotate(-45deg);
+  -ms-transform: rotate(-45deg);
+  -o-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+}
+/* Control Bar
+--------------------------------------------------------------------------------
+The default control bar that is a container for most of the controls.
+*/
+.vjs-default-skin .vjs-control-bar {
+  /* Start hidden */
+  /*display: none;*/
+  position: absolute;
+  /* Place control bar at the bottom of the player box/video.
+     If you want more margin below the control bar, add more height. */
+  bottom: 0;
+  /* Use left/right to stretch to 100% width of player div */
+  left: 0;
+  right: 0;
+  /* Height includes any margin you want above or below control items */
+  height: 3.0em;
+  /* background-color-with-alpha */
+  background-color: #07141e;
+  background-color: rgba(7, 20, 30, 0.7);
+}
+/* Show the control bar only once the video has started playing */
+.vjs-default-skin.vjs-has-started .vjs-control-bar {
+  display: block;
+  /* Visibility needed to make sure things hide in older browsers too. */
+
+  visibility: visible;
+  opacity: 1;
+  /* transition */
+  -webkit-transition: visibility 0.1s, opacity 0.1s;
+  -moz-transition: visibility 0.1s, opacity 0.1s;
+  -o-transition: visibility 0.1s, opacity 0.1s;
+  transition: visibility 0.1s, opacity 0.1s;
+}
+/* Hide the control bar when the video is playing and the user is inactive  */
+.vjs-default-skin.vjs-has-started.vjs-user-inactive.vjs-playing .vjs-control-bar {
+  display: block;
+  visibility: hidden;
+  opacity: 0;
+  /* transition */
+  -webkit-transition: visibility 1s, opacity 1s;
+  -moz-transition: visibility 1s, opacity 1s;
+  -o-transition: visibility 1s, opacity 1s;
+  transition: visibility 1s, opacity 1s;
+}
+.vjs-default-skin.vjs-controls-disabled .vjs-control-bar {
+  display: none;
+}
+.vjs-default-skin.vjs-using-native-controls .vjs-control-bar {
+  display: none;
+}
+/* IE8 is flakey with fonts, and you have to change the actual content to force
+fonts to show/hide properly.
+  - "\9" IE8 hack didn't work for this
+  - Found in XP IE8 from http://modern.ie. Does not show up in "IE8 mode" in IE9
+*/
+@media \0screen {
+  .vjs-default-skin.vjs-user-inactive.vjs-playing .vjs-control-bar :before {
+    content: "";
+  }
+}
+/* General styles for individual controls. */
+.vjs-default-skin .vjs-control {
+  outline: none;
+  position: relative;
+  float: left;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+  height: 3.0em;
+  width: 4em;
+}
+/* FontAwsome button icons */
+.vjs-default-skin .vjs-control:before {
+  font-family: VideoJS;
+  font-size: 1.5em;
+  line-height: 2;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
+}
+/* Replacement for focus outline */
+.vjs-default-skin .vjs-control:focus:before,
+.vjs-default-skin .vjs-control:hover:before {
+  text-shadow: 0em 0em 1em #ffffff;
+}
+.vjs-default-skin .vjs-control:focus {
+  /*  outline: 0; */
+  /* keyboard-only users cannot see the focus on several of the UI elements when
+  this is set to 0 */
+
+}
+/* Hide control text visually, but have it available for screenreaders */
+.vjs-default-skin .vjs-control-text {
+  /* hide-visually */
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+}
+/* Play/Pause
+--------------------------------------------------------------------------------
+*/
+.vjs-default-skin .vjs-play-control {
+  width: 5em;
+  cursor: pointer;
+}
+.vjs-default-skin .vjs-play-control:before {
+  content: "\e001";
+}
+.vjs-default-skin.vjs-playing .vjs-play-control:before {
+  content: "\e002";
+}
+/* Volume/Mute
+-------------------------------------------------------------------------------- */
+.vjs-default-skin .vjs-mute-control,
+.vjs-default-skin .vjs-volume-menu-button {
+  cursor: pointer;
+  float: right;
+}
+.vjs-default-skin .vjs-mute-control:before,
+.vjs-default-skin .vjs-volume-menu-button:before {
+  content: "\e006";
+}
+.vjs-default-skin .vjs-mute-control.vjs-vol-0:before,
+.vjs-default-skin .vjs-volume-menu-button.vjs-vol-0:before {
+  content: "\e003";
+}
+.vjs-default-skin .vjs-mute-control.vjs-vol-1:before,
+.vjs-default-skin .vjs-volume-menu-button.vjs-vol-1:before {
+  content: "\e004";
+}
+.vjs-default-skin .vjs-mute-control.vjs-vol-2:before,
+.vjs-default-skin .vjs-volume-menu-button.vjs-vol-2:before {
+  content: "\e005";
+}
+.vjs-default-skin .vjs-volume-control {
+  width: 5em;
+  float: right;
+}
+.vjs-default-skin .vjs-volume-bar {
+  width: 5em;
+  height: 0.6em;
+  margin: 1.1em auto 0;
+}
+.vjs-default-skin .vjs-volume-menu-button .vjs-menu-content {
+  height: 2.9em;
+}
+.vjs-default-skin .vjs-volume-level {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 0.5em;
+  background: #66a8cc url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAYAAAAGCAYAAADgzO9IAAAAP0lEQVQIHWWMAQoAIAgDR/QJ/Ub//04+w7ZICBwcOg5FZi5iBB82AGzixEglJrd4TVK5XUJpskSTEvpdFzX9AB2pGziSQcvAAAAAAElFTkSuQmCC) -50% 0 repeat;
+}
+.vjs-default-skin .vjs-volume-bar .vjs-volume-handle {
+  width: 0.5em;
+  height: 0.5em;
+}
+.vjs-default-skin .vjs-volume-handle:before {
+  font-size: 0.9em;
+  top: -0.2em;
+  left: -0.2em;
+  width: 1em;
+  height: 1em;
+}
+.vjs-default-skin .vjs-volume-menu-button .vjs-menu .vjs-menu-content {
+  width: 6em;
+  left: -4em;
+}
+/* Progress
+--------------------------------------------------------------------------------
+*/
+.vjs-default-skin .vjs-progress-control {
+  position: absolute;
+  left: 0;
+  right: 0;
+  width: auto;
+  font-size: 0.3em;
+  height: 1em;
+  /* Set above the rest of the controls. */
+  top: -1em;
+  /* Shrink the bar slower than it grows. */
+  /* transition */
+  -webkit-transition: all 0.4s;
+  -moz-transition: all 0.4s;
+  -o-transition: all 0.4s;
+  transition: all 0.4s;
+}
+/* On hover, make the progress bar grow to something that's more clickable.
+    This simply changes the overall font for the progress bar, and this
+    updates both the em-based widths and heights, as wells as the icon font */
+.vjs-default-skin:hover .vjs-progress-control {
+  font-size: .9em;
+  /* Even though we're not changing the top/height, we need to include them in
+      the transition so they're handled correctly. */
+
+  /* transition */
+  -webkit-transition: all 0.2s;
+  -moz-transition: all 0.2s;
+  -o-transition: all 0.2s;
+  transition: all 0.2s;
+}
+/* Box containing play and load progresses. Also acts as seek scrubber. */
+.vjs-default-skin .vjs-progress-holder {
+  height: 100%;
+}
+/* Progress Bars */
+.vjs-default-skin .vjs-progress-holder .vjs-play-progress,
+.vjs-default-skin .vjs-progress-holder .vjs-load-progress {
+  position: absolute;
+  display: block;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  /* Needed for IE6 */
+  left: 0;
+  top: 0;
+}
+.vjs-default-skin .vjs-play-progress {
+  /*
+    Using a data URI to create the white diagonal lines with a transparent
+      background. Surprisingly works in IE8.
+      Created using http://www.patternify.com
+    Changing the first color value will change the bar color.
+    Also using a paralax effect to make the lines move backwards.
+      The -50% left position makes that happen.
+  */
+
+  background: #66a8cc url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAYAAAAGCAYAAADgzO9IAAAAP0lEQVQIHWWMAQoAIAgDR/QJ/Ub//04+w7ZICBwcOg5FZi5iBB82AGzixEglJrd4TVK5XUJpskSTEvpdFzX9AB2pGziSQcvAAAAAAElFTkSuQmCC) -50% 0 repeat;
+}
+.vjs-default-skin .vjs-load-progress {
+  background: #646464 /* IE8- Fallback */;
+  background: rgba(255, 255, 255, 0.4);
+}
+.vjs-default-skin .vjs-seek-handle {
+  width: 1.5em;
+  height: 100%;
+}
+.vjs-default-skin .vjs-seek-handle:before {
+  padding-top: 0.1em /* Minor adjustment */;
+}
+/* Time Display
+--------------------------------------------------------------------------------
+*/
+.vjs-default-skin .vjs-time-controls {
+  font-size: 1em;
+  /* Align vertically by making the line height the same as the control bar */
+  line-height: 3em;
+}
+.vjs-default-skin .vjs-current-time {
+  float: left;
+}
+.vjs-default-skin .vjs-duration {
+  float: left;
+}
+/* Remaining time is in the HTML, but not included in default design */
+.vjs-default-skin .vjs-remaining-time {
+  display: none;
+  float: left;
+}
+.vjs-time-divider {
+  float: left;
+  line-height: 3em;
+}
+/* Fullscreen
+--------------------------------------------------------------------------------
+*/
+.vjs-default-skin .vjs-fullscreen-control {
+  width: 3.8em;
+  cursor: pointer;
+  float: right;
+}
+.vjs-default-skin .vjs-fullscreen-control:before {
+  content: "\e000";
+}
+/* Switch to the exit icon when the player is in fullscreen */
+.vjs-default-skin.vjs-fullscreen .vjs-fullscreen-control:before {
+  content: "\e00b";
+}
+/* Big Play Button (play button at start)
+--------------------------------------------------------------------------------
+Positioning of the play button in the center or other corners can be done more
+easily in the skin designer. http://designer.videojs.com/
+*/
+.vjs-default-skin .vjs-big-play-button {
+  left: 0.5em;
+  top: 0.5em;
+  font-size: 3em;
+  display: block;
+  z-index: 2;
+  position: absolute;
+  width: 4em;
+  height: 2.6em;
+  text-align: center;
+  vertical-align: middle;
+  cursor: pointer;
+  opacity: 0;
+  /* Need a slightly gray bg so it can be seen on black backgrounds */
+  /* background-color-with-alpha */
+  background-color: #000;
+  background-color: rgba(0, 0, 0, 1.0);
+  /*border: 0.1em solid #3b4249;*/
+  /* border-radius */
+  -webkit-border-radius: 0.1em;
+  -moz-border-radius: 0.1em;
+  border-radius: 0.1em;
+  /* box-shadow */
+  -webkit-box-shadow: 0px 0px 1em rgba(255, 255, 255, 0.25);
+  -moz-box-shadow: 0px 0px 1em rgba(255, 255, 255, 0.25);
+  box-shadow: 0px 0px 1em rgba(255, 255, 255, 0.25);
+  /* transition */
+  -webkit-transition: all 0.4s;
+  -moz-transition: all 0.4s;
+  -o-transition: all 0.4s;
+  transition: all 0.4s;
+}
+/* Hide if controls are disabled */
+.vjs-default-skin.vjs-controls-disabled .vjs-big-play-button {
+  display: none;
+}
+/* Hide when video starts playing */
+.vjs-default-skin.vjs-has-started .vjs-big-play-button {
+  display: none;
+}
+/* Hide on mobile devices. Remove when we stop using native controls
+    by default on mobile  */
+.vjs-default-skin.vjs-using-native-controls .vjs-big-play-button {
+  display: none;
+}
+.vjs-default-skin:hover .vjs-big-play-button,
+.vjs-default-skin .vjs-big-play-button:focus {
+  outline: 0;
+  border-color: #fff;
+  /* IE8 needs a non-glow hover state */
+  background-color: #505050;
+  background-color: rgba(50, 50, 50, 0.75);
+  /* box-shadow */
+  -webkit-box-shadow: 0 0 3em #ffffff;
+  -moz-box-shadow: 0 0 3em #ffffff;
+  box-shadow: 0 0 3em #ffffff;
+  /* transition */
+  -webkit-transition: all 0s;
+  -moz-transition: all 0s;
+  -o-transition: all 0s;
+  transition: all 0s;
+}
+.vjs-default-skin .vjs-big-play-button:before {
+  content: "\e001";
+  font-family: VideoJS;
+  /* In order to center the play icon vertically we need to set the line height
+     to the same as the button height */
+
+  line-height: 1.4em;
+  text-shadow: 0.05em 0.05em 0.1em #000;
+  text-align: center /* Needed for IE8 */;
+  position: absolute;
+  left: 0;
+  width: 110%;
+  height: 100%;
+}
+/* Loading Spinner
+--------------------------------------------------------------------------------
+*/
+.vjs-loading-spinner {
+  display: none;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  font-size: 5em;
+  line-height: 1;
+  width: 1em;
+  height: 1em;
+  margin-left: -0.5em;
+  margin-top: -0.5em;
+  opacity: 0.75;
+  /* animation */
+  -webkit-animation: spin 1.5s infinite linear;
+  -moz-animation: spin 1.5s infinite linear;
+  -o-animation: spin 1.5s infinite linear;
+  animation: spin 1.5s infinite linear;
+}
+.vjs-default-skin .vjs-loading-spinner:before {
+  content: "\e00a";
+  font-family: VideoJS;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 1em;
+  height: 1em;
+  text-align: center;
+  text-shadow: 0em 0em 0.1em #000;
+}
+@-moz-keyframes spin {
+  0% {
+    -moz-transform: rotate(0deg);
+  }
+  100% {
+    -moz-transform: rotate(359deg);
+  }
+}
+@-webkit-keyframes spin {
+  0% {
+    -webkit-transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(359deg);
+  }
+}
+@-o-keyframes spin {
+  0% {
+    -o-transform: rotate(0deg);
+  }
+  100% {
+    -o-transform: rotate(359deg);
+  }
+}
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(359deg);
+  }
+}
+/* Menu Buttons (Captions/Subtitles/etc.)
+--------------------------------------------------------------------------------
+*/
+.vjs-default-skin .vjs-menu-button {
+  float: right;
+  cursor: pointer;
+}
+.vjs-default-skin .vjs-menu {
+  display: none;
+  position: absolute;
+  bottom: 0;
+  left: 0em;
+  /* (Width of vjs-menu - width of button) / 2 */
+
+  width: 0em;
+  height: 0em;
+  margin-bottom: 3em;
+  border-left: 2em solid transparent;
+  border-right: 2em solid transparent;
+  border-top: 1.55em solid #000000;
+  /* Same width top as ul bottom */
+
+  border-top-color: rgba(7, 40, 50, 0.5);
+  /* Same as ul background */
+
+}
+/* Button Pop-up Menu */
+.vjs-default-skin .vjs-menu-button .vjs-menu .vjs-menu-content {
+  display: block;
+  padding: 0;
+  margin: 0;
+  position: absolute;
+  width: 10em;
+  bottom: 1.5em;
+  /* Same bottom as vjs-menu border-top */
+
+  max-height: 15em;
+  overflow: auto;
+  left: -5em;
+  /* Width of menu - width of button / 2 */
+
+  /* background-color-with-alpha */
+  background-color: #07141e;
+  background-color: rgba(7, 20, 30, 0.7);
+  /* box-shadow */
+  -webkit-box-shadow: -0.2em -0.2em 0.3em rgba(255, 255, 255, 0.2);
+  -moz-box-shadow: -0.2em -0.2em 0.3em rgba(255, 255, 255, 0.2);
+  box-shadow: -0.2em -0.2em 0.3em rgba(255, 255, 255, 0.2);
+}
+.vjs-default-skin .vjs-menu-button:hover .vjs-menu {
+  display: block;
+}
+.vjs-default-skin .vjs-menu-button ul li {
+  list-style: none;
+  margin: 0;
+  padding: 0.3em 0 0.3em 0;
+  line-height: 1.4em;
+  font-size: 1.2em;
+  text-align: center;
+  text-transform: lowercase;
+}
+.vjs-default-skin .vjs-menu-button ul li.vjs-selected {
+  background-color: #000;
+}
+.vjs-default-skin .vjs-menu-button ul li:focus,
+.vjs-default-skin .vjs-menu-button ul li:hover,
+.vjs-default-skin .vjs-menu-button ul li.vjs-selected:focus,
+.vjs-default-skin .vjs-menu-button ul li.vjs-selected:hover {
+  outline: 0;
+  color: #111;
+  /* background-color-with-alpha */
+  background-color: #ffffff;
+  background-color: rgba(255, 255, 255, 0.75);
+  /* box-shadow */
+  -webkit-box-shadow: 0 0 1em #ffffff;
+  -moz-box-shadow: 0 0 1em #ffffff;
+  box-shadow: 0 0 1em #ffffff;
+}
+.vjs-default-skin .vjs-menu-button ul li.vjs-menu-title {
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 1em;
+  line-height: 2em;
+  padding: 0;
+  margin: 0 0 0.3em 0;
+  font-weight: bold;
+  cursor: default;
+}
+/* Subtitles Button */
+.vjs-default-skin .vjs-subtitles-button:before {
+  content: "\e00c";
+}
+/* Captions Button */
+.vjs-default-skin .vjs-captions-button:before {
+  content: "\e008";
+}
+/* Replacement for focus outline */
+.vjs-default-skin .vjs-captions-button:focus .vjs-control-content:before,
+.vjs-default-skin .vjs-captions-button:hover .vjs-control-content:before {
+  /* box-shadow */
+  -webkit-box-shadow: 0 0 1em #ffffff;
+  -moz-box-shadow: 0 0 1em #ffffff;
+  box-shadow: 0 0 1em #ffffff;
+}
+/*
+REQUIRED STYLES (be careful overriding)
+================================================================================
+When loading the player, the video tag is replaced with a DIV,
+that will hold the video tag or object tag for other playback methods.
+The div contains the video playback element (Flash or HTML5) and controls,
+and sets the width and height of the video.
+
+** If you want to add some kind of border/padding (e.g. a frame), or special
+positioning, use another containing element. Otherwise you risk messing up
+control positioning and full window mode. **
+*/
+.video-js {
+  background-color: #000;
+  position: relative;
+  padding: 0;
+  /* Start with 10px for base font size so other dimensions can be em based and
+     easily calculable. */
+
+  font-size: 10px;
+  /* Allow poster to be vertially aligned. */
+
+  vertical-align: middle;
+  /*  display: table-cell; */
+  /*This works in Safari but not Firefox.*/
+
+  /* Provide some basic defaults for fonts */
+
+  font-weight: normal;
+  font-style: normal;
+  /* Avoiding helvetica: issue #376 */
+
+  font-family: Arial, sans-serif;
+  /* Turn off user selection (text highlighting) by default.
+     The majority of player components will not be text blocks.
+     Text areas will need to turn user selection back on. */
+
+  /* user-select */
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+/* Playback technology elements expand to the width/height of the containing div
+    <video> or <object> */
+.video-js .vjs-tech {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+/* Fix for Firefox 9 fullscreen (only if it is enabled). Not needed when
+   checking fullScreenEnabled. */
+.video-js:-moz-full-screen {
+  position: absolute;
+}
+/* Fullscreen Styles */
+body.vjs-full-window {
+  padding: 0;
+  margin: 0;
+  height: 100%;
+  /* Fix for IE6 full-window. http://www.cssplay.co.uk/layouts/fixed.html */
+  overflow-y: auto;
+}
+.video-js.vjs-fullscreen {
+  position: fixed;
+  overflow: hidden;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  width: 100% !important;
+  height: 100% !important;
+  /* IE6 full-window (underscore hack) */
+  _position: absolute;
+}
+.video-js:-webkit-full-screen {
+  width: 100% !important;
+  height: 100% !important;
+}
+.video-js.vjs-fullscreen.vjs-user-inactive {
+  cursor: none;
+}
+/* Poster Styles */
+.vjs-poster {
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  background-size: contain;
+  cursor: pointer;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  position: relative;
+  width: 100%;
+}
+.vjs-poster img {
+  display: block;
+  margin: 0 auto;
+  max-height: 100%;
+  padding: 0;
+  width: 100%;
+}
+/* Hide the poster when native controls are used otherwise it covers them */
+.video-js.vjs-using-native-controls .vjs-poster {
+  display: none;
+}
+/* Text Track Styles */
+/* Overall track holder for both captions and subtitles */
+.video-js .vjs-text-track-display {
+  text-align: center;
+  position: absolute;
+  bottom: 4em;
+  /* Leave padding on left and right */
+  left: 1em;
+  right: 1em;
+}
+/* Individual tracks */
+.video-js .vjs-text-track {
+  display: none;
+  font-size: 1.4em;
+  text-align: center;
+  margin-bottom: 0.1em;
+  /* Transparent black background, or fallback to all black (oldIE) */
+  /* background-color-with-alpha */
+  background-color: #000000;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+.video-js .vjs-subtitles {
+  color: #ffffff /* Subtitles are white */;
+}
+.video-js .vjs-captions {
+  color: #ffcc66 /* Captions are yellow */;
+}
+.vjs-tt-cue {
+  display: block;
+}
+/* Hide disabled or unsupported controls */
+.vjs-default-skin .vjs-hidden {
+  display: none;
+}
+.vjs-lock-showing {
+  display: block !important;
+  opacity: 1;
+  visibility: visible;
+}
+/* -----------------------------------------------------------------------------
+The original source of this file lives at
+https://github.com/videojs/video.js/blob/master/src/css/video-js.less */
+
+
+
+
+
+/*!
+Video.js Default Styles (http://videojs.com)
+Version 4.1.0
+*/
+
+/*
+REQUIRED STYLES (be careful overriding)
+================================================================================ */
+/* When loading the player, the video tag is replaced with a DIV,
+   that will hold the video tag or object tag for other playback methods.
+   The div contains the video playback element (Flash or HTML5) and controls, and sets the width and height of the video.
+
+   ** If you want to add some kind of border/padding (e.g. a frame), or special positioning, use another containing element.
+   Otherwise you risk messing up control positioning and full window mode. **
+*/
+.video-js {
+  background-color: #000;
+  position: relative;
+  padding: 0;
+  /* Start with 10px for base font size so other dimensions can be em based and easily calculable. */
+  font-size: 10px;
+  /* Allow poster to be vertially aligned. */
+  vertical-align: middle;
+  /*  display: table-cell; */ /*This works in Safari but not Firefox.*/
+
+  /* Turn off user selection (text highlighting) by default.
+     The majority of player components will not be text blocks.
+     Text areas will need to turn user selection back on. */
+  -webkit-user-select: none;  /* Chrome all / Safari all */
+  -moz-user-select: none;     /* Firefox all */
+  -ms-user-select: none;      /* IE 10+ */
+  -o-user-select: none;
+  user-select: none;
+}
+
+/* Playback technology elements expand to the width/height of the containing div.
+    <video> or <object> */
+.video-js .vjs-tech {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+/* Fix for Firefox 9 fullscreen (only if it is enabled). Not needed when checking fullScreenEnabled. */
+.video-js:-moz-full-screen { position: absolute; }
+
+/* Fullscreen Styles */
+body.vjs-full-window {
+  padding: 0;
+  margin: 0;
+  height: 100%;
+  overflow-y: auto; /* Fix for IE6 full-window. http://www.cssplay.co.uk/layouts/fixed.html */
+}
+.video-js.vjs-fullscreen {
+  position: fixed;
+  overflow: hidden;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  width: 100% !important;
+  height: 100% !important;
+  _position: absolute; /* IE6 Full-window (underscore hack) */
+}
+.video-js:-webkit-full-screen {
+  width: 100% !important; height: 100% !important;
+}
+
+/* Poster Styles */
+.vjs-poster {
+	background-repeat: no-repeat;
+	background-position: 50% 50%;
+	background-size: contain;
+	cursor: pointer;
+	height: 100%;
+	margin: 0;
+	padding: 0;
+	position: absolute;
+	width: 100%;
+}
+.vjs-poster img {
+  display: block;
+  margin: 0 auto;
+  max-height: 100%;
+  padding: 0;
+  width: 100%;
+}
+
+/* Text Track Styles */
+/* Overall track holder for both captions and subtitles */
+.video-js .vjs-text-track-display {
+  text-align: center;
+  position: absolute;
+  bottom: 4em;
+  left: 1em; /* Leave padding on left and right */
+  right: 1em;
+  font-family: Arial, sans-serif;
+}
+/* Individual tracks */
+.video-js .vjs-text-track {
+  display: none;
+  font-size: 1.4em;
+  text-align: center;
+  margin-bottom: 0.1em;
+  /* Transparent black background, or fallback to all black (oldIE) */
+  background: rgb(0, 0, 0); background: rgba(0, 0, 0, 0.50);
+}
+.video-js .vjs-subtitles { color: #fff; } /* Subtitles are white */
+.video-js .vjs-captions { color: #fc6; } /* Captions are yellow */
+.vjs-tt-cue { display: block; }
+
+/* Fading sytles, used to fade control bar. */
+.vjs-fade-in {
+  display: block !important;
+  visibility: visible; /* Needed to make sure things hide in older browsers too. */
+  opacity: 1;
+
+  -webkit-transition: visibility 0.1s, opacity 0.1s;
+     -moz-transition: visibility 0.1s, opacity 0.1s;
+      -ms-transition: visibility 0.1s, opacity 0.1s;
+       -o-transition: visibility 0.1s, opacity 0.1s;
+          transition: visibility 0.1s, opacity 0.1s;
+}
+.vjs-fade-out {
+  display: block !important;
+  visibility: hidden;
+  opacity: 0;
+
+  -webkit-transition: visibility 1.5s, opacity 1.5s;
+     -moz-transition: visibility 1.5s, opacity 1.5s;
+      -ms-transition: visibility 1.5s, opacity 1.5s;
+       -o-transition: visibility 1.5s, opacity 1.5s;
+          transition: visibility 1.5s, opacity 1.5s;
+
+  /* Wait a moment before fading out the control bar */
+  -webkit-transition-delay: 2s;
+     -moz-transition-delay: 2s;
+      -ms-transition-delay: 2s;
+       -o-transition-delay: 2s;
+          transition-delay: 2s;
+}
+/* Hide disabled or unsupported controls */
+.vjs-default-skin .vjs-hidden { display: none; }
+
+.vjs-lock-showing {
+  display: block !important;
+  opacity: 1;
+  visibility: visible;
+}
+
+/* DEFAULT SKIN (override in another file to create new skins)
+================================================================================
+Instead of editing this file, I recommend creating your own skin CSS file to be included after this file,
+so you can upgrade to newer versions easier. You can remove all these styles by removing the 'vjs-default-skin' class from the tag. */
+
+/* Base UI Component Classes
+-------------------------------------------------------------------------------- */
+@font-face{
+  font-family: 'VideoJS';
+  src: url('../fonts/vjs.eot');
+  src: url('../fonts/vjs_.eot#iefix') format('embedded-opentype'),
+  url('../fonts/vjs.woff') format('woff'),
+  url('../fonts/vjs.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+.vjs-default-skin {
+  color: #ccc;
+}
+
+/* Slider - used for Volume bar and Seek bar */
+.vjs-default-skin .vjs-slider {
+  outline: 0; /* Replace browser focus hightlight with handle highlight */
+  position: relative;
+  cursor: pointer;
+  padding: 0;
+
+  background: rgb(50, 50, 50); /* IE8- Fallback */
+  background: rgba(100, 100, 100, 0.5);
+}
+
+.vjs-default-skin .vjs-slider:focus {
+  background: rgb(70, 70, 70); /* IE8- Fallback */
+  background: rgba(100, 100, 100, 0.70);
+
+  -webkit-box-shadow: 0 0 2em rgba(255, 255, 255, 1);
+     -moz-box-shadow: 0 0 2em rgba(255, 255, 255, 1);
+          box-shadow: 0 0 2em rgba(255, 255, 255, 1);
+}
+
+.vjs-default-skin .vjs-slider-handle {
+  position: absolute;
+  /* Needed for IE6 */
+  left: 0;
+  top: 0;
+}
+
+.vjs-default-skin .vjs-slider-handle:before {
+  /*content: "\f111";*/ /* Circle icon = f111 */
+  content: "\e009"; /* Square icon */
+  font-family: VideoJS;
+  font-size: 1em;
+  line-height: 1;
+  text-align: center;
+  text-shadow: 0em 0em 1em #fff;
+
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  /* Rotate the square icon to make a diamond */
+  -webkit-transform: rotate(-45deg);
+     -moz-transform: rotate(-45deg);
+      -ms-transform: rotate(-45deg);
+       -o-transform: rotate(-45deg);
+  filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=2);
+}
+
+/* Control Bar
+-------------------------------------------------------------------------------- */
+/* The default control bar. Created by controls.js */
+.vjs-default-skin .vjs-control-bar {
+  /*display: none;*/ /* Start hidden */
+  position: absolute;
+  /* Distance from the bottom of the box/video. Keep 0. Use height to add more bottom margin. */
+  bottom: 0;
+  /* 100% width of player div */
+  left: 0;
+  right: 0;
+  /* Controls are absolutely position, so no padding necessary */
+  padding: 0;
+  margin: 0;
+  /* Height includes any margin you want above or below control items */
+  height: 3.0em;
+  background-color: rgb(0, 0, 0);
+  /* Slight blue so it can be seen more easily on black. */
+  background-color: rgba(7, 40, 50, 0.7);
+  /* Default font settings */
+  font-style: normal;
+  font-weight: normal;
+  font-family: Arial, sans-serif;
+}
+
+/* General styles for individual controls. */
+.vjs-default-skin .vjs-control {
+  outline: none;
+  position: relative;
+  float: left;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+  height: 3.0em;
+  width: 4em;
+}
+
+/* FontAwsome button icons */
+.vjs-default-skin .vjs-control:before {
+  font-family: VideoJS;
+  font-size: 1.5em;
+  line-height: 2;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  text-shadow: 1px 1px 1px rgba(0,0,0,0.5);
+}
+
+/* Replacement for focus outline */
+.vjs-default-skin .vjs-control:focus:before,
+.vjs-default-skin .vjs-control:hover:before {
+  text-shadow: 0em 0em 1em rgba(255, 255, 255, 1);
+}
+
+.vjs-default-skin .vjs-control:focus { /*  outline: 0; */ /* keyboard-only users cannot see the focus on several of the UI elements when this is set to 0 */ }
+
+/* Hide control text visually, but have it available for screenreaders: h5bp.com/v */
+.vjs-default-skin .vjs-control-text { border: 0; clip: rect(0 0 0 0); height: 1px; margin: -1px; overflow: hidden; padding: 0; position: absolute; width: 1px; }
+
+/* Play/Pause
+-------------------------------------------------------------------------------- */
+.vjs-default-skin .vjs-play-control {
+  width: 5em;
+  cursor: pointer;
+}
+.vjs-default-skin .vjs-play-control:before {
+  content: "\e001"; /* Play Icon */
+}
+.vjs-default-skin.vjs-playing .vjs-play-control:before {
+  content: "\e002"; /* Pause Icon */
+}
+
+/* Rewind
+-------------------------------------------------------------------------------- */
+/*.vjs-default-skin .vjs-rewind-control { width: 5em; cursor: pointer !important; }
+.vjs-default-skin .vjs-rewind-control div { width: 19px; height: 16px; background: url('video-js.png.html'); margin: 0.5em auto 0; }
+*/
+
+/* Volume/Mute
+-------------------------------------------------------------------------------- */
+.vjs-default-skin .vjs-mute-control,
+.vjs-default-skin .vjs-volume-menu-button {
+  cursor: pointer;
+  float: right;
+}
+.vjs-default-skin .vjs-mute-control:before,
+.vjs-default-skin .vjs-volume-menu-button:before {
+  content: "\e006"; /* Full volume */
+}
+.vjs-default-skin .vjs-mute-control.vjs-vol-0:before,
+.vjs-default-skin .vjs-volume-menu-button.vjs-vol-0:before {
+  content: "\e003"; /* No volume */
+}
+.vjs-default-skin .vjs-mute-control.vjs-vol-1:before,
+.vjs-default-skin .vjs-volume-menu-button.vjs-vol-1:before {
+  content: "\e004"; /* Half volume */
+}
+.vjs-default-skin .vjs-mute-control.vjs-vol-2:before,
+.vjs-default-skin .vjs-volume-menu-button.vjs-vol-2:before {
+  content: "\e005"; /* Full volume */
+}
+
+.vjs-default-skin .vjs-volume-control {
+  width: 5em;
+  float: right;
+}
+.vjs-default-skin .vjs-volume-bar {
+  width: 5em;
+  height: 0.6em;
+  margin: 1.1em auto 0;
+}
+
+.vjs-default-skin .vjs-volume-menu-button .vjs-menu-content {
+  height: 2.9em;
+}
+
+.vjs-default-skin .vjs-volume-level {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 0.5em;
+
+  background: #66A8CC
+    url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAYAAAAGCAYAAADgzO9IAAAAP0lEQVQIHWWMAQoAIAgDR/QJ/Ub//04+w7ZICBwcOg5FZi5iBB82AGzixEglJrd4TVK5XUJpskSTEvpdFzX9AB2pGziSQcvAAAAAAElFTkSuQmCC)
+    -50% 0 repeat;
+}
+.vjs-default-skin .vjs-volume-bar .vjs-volume-handle {
+  width: 0.5em;
+  height: 0.5em;
+}
+
+.vjs-default-skin .vjs-volume-handle:before {
+  font-size: 0.9em;
+  top: -0.2em;
+  left: -0.2em;
+
+  width: 1em;
+  height: 1em;
+}
+
+.vjs-default-skin .vjs-volume-menu-button .vjs-menu .vjs-menu-content {
+  width: 6em;
+  left: -4em;
+}
+
+/*.vjs-default-skin .vjs-menu-button .vjs-volume-control {
+  height: 1.5em;
+}*/
+
+/* Progress
+-------------------------------------------------------------------------------- */
+.vjs-default-skin .vjs-progress-control {
+  position: absolute;
+  left: 0;
+  right: 0;
+  width: auto;
+  font-size: 0.3em;
+  height: 1em;
+  /* Set above the rest of the controls. */
+  top: -1em;
+
+  /* Shrink the bar slower than it grows. */
+  -webkit-transition: top 0.4s, height 0.4s, font-size 0.4s, -webkit-transform 0.4s;
+     -moz-transition: top 0.4s, height 0.4s, font-size 0.4s,    -moz-transform 0.4s;
+       -o-transition: top 0.4s, height 0.4s, font-size 0.4s,      -o-transform 0.4s;
+          transition: top 0.4s, height 0.4s, font-size 0.4s,         transform 0.4s;
+
+}
+
+/* On hover, make the progress bar grow to something that's more clickable.
+    This simply changes the overall font for the progress bar, and this
+    updates both the em-based widths and heights, as wells as the icon font */
+.vjs-default-skin:hover .vjs-progress-control {
+  font-size: .9em;
+
+  /* Even though we're not changing the top/height, we need to include them in
+      the transition so they're handled correctly. */
+  -webkit-transition: top 0.2s, height 0.2s, font-size 0.2s, -webkit-transform 0.2s;
+     -moz-transition: top 0.2s, height 0.2s, font-size 0.2s,    -moz-transform 0.2s;
+       -o-transition: top 0.2s, height 0.2s, font-size 0.2s,      -o-transform 0.2s;
+          transition: top 0.2s, height 0.2s, font-size 0.2s,         transform 0.2s;
+}
+
+/* Box containing play and load progresses. Also acts as seek scrubber. */
+.vjs-default-skin .vjs-progress-holder {
+  /* Placement within the progress control item */
+  height: 100%;
+}
+
+/* Progress Bars */
+.vjs-default-skin .vjs-progress-holder .vjs-play-progress,
+.vjs-default-skin .vjs-progress-holder .vjs-load-progress {
+  position: absolute;
+  display: block;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  /* Needed for IE6 */
+  left: 0;
+  top: 0;
+}
+
+.vjs-default-skin .vjs-play-progress {
+  /*
+    Using a data URI to create the white diagonal lines with a transparent
+      background. Surprising works in IE8.
+      Created using http://www.patternify.com
+    Changing the first color value will change the bar color.
+    Also using a paralax effect to make the lines move backwards.
+      The -50% left position makes that happen.
+  */
+  background: #66A8CC
+    url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAYAAAAGCAYAAADgzO9IAAAAP0lEQVQIHWWMAQoAIAgDR/QJ/Ub//04+w7ZICBwcOg5FZi5iBB82AGzixEglJrd4TVK5XUJpskSTEvpdFzX9AB2pGziSQcvAAAAAAElFTkSuQmCC)
+    -50% 0 repeat;
+}
+.vjs-default-skin .vjs-load-progress {
+  background: rgb(100, 100, 100); /* IE8- Fallback */
+  background: rgba(255, 255, 255, 0.4);
+}
+
+.vjs-default-skin .vjs-seek-handle {
+  width: 1.5em;
+  height: 100%;
+}
+
+.vjs-default-skin .vjs-seek-handle:before {
+  padding-top: 0.1em; /* Minor adjustment */
+}
+
+/* Time Display
+-------------------------------------------------------------------------------- */
+.vjs-default-skin .vjs-time-controls {
+  font-size: 1em;
+  /* Align vertically by making the line height the same as the control bar */
+  line-height: 3em;
+}
+.vjs-default-skin .vjs-current-time { float: left; }
+.vjs-default-skin .vjs-duration { float: left; }
+/* Remaining time is in the HTML, but not included in default design */
+.vjs-default-skin .vjs-remaining-time { display: none; float: left; }
+.vjs-time-divider { float: left; line-height: 3em; }
+
+/* Fullscreen
+-------------------------------------------------------------------------------- */
+.vjs-default-skin .vjs-fullscreen-control {
+  width: 3.8em;
+  cursor: pointer;
+  float: right;
+}
+.vjs-default-skin .vjs-fullscreen-control:before {
+  content: "\e000"; /* Enter full screen */
+}
+.vjs-default-skin.vjs-fullscreen .vjs-fullscreen-control:before {
+  content: "\e00b"; /* Exit full screen */
+}
+
+/* Big Play Button (at start)
+---------------------------------------------------------*/
+.vjs-default-skin .vjs-big-play-button {
+  display: block;
+z-index: 10;
+position: absolute;
+top: 4em;
+left: 7em;
+width: 5em;
+height: 4em;
+margin: 0 auto;
+text-align: center;
+vertical-align: middle;
+cursor: pointer;
+  opacity: 0;
+
+  /* Need a slightly gray bg so it can be seen on black backgrounds */
+  background-color: rgb(0, 0, 0);
+  background-color: rgba(0, 0, 0, 1.0);
+
+  /* border: 0.3em solid rgb(50, 50, 50);
+  border-color: rgba(255, 255, 255, 0.25); */
+
+  -webkit-border-radius: 25px;
+     -moz-border-radius: 25px;
+          border-radius: 25px;
+
+  -webkit-box-shadow: 0px 0px 1em rgba(255, 255, 255, 0.25);
+     -moz-box-shadow: 0px 0px 1em rgba(255, 255, 255, 0.25);
+          box-shadow: 0px 0px 1em rgba(255, 255, 255, 0.25);
+
+  -webkit-transition: border 0.4s, -webkit-box-shadow 0.4s, -webkit-transform 0.4s;
+     -moz-transition: border 0.4s,    -moz-box-shadow 0.4s,    -moz-transform 0.4s;
+       -o-transition: border 0.4s,      -o-box-shadow 0.4s,      -o-transform 0.4s;
+          transition: border 0.4s,         box-shadow 0.4s,         transform 0.4s;
+}
+
+.vjs-default-skin:hover .vjs-big-play-button,
+.vjs-default-skin .vjs-big-play-button:focus {
+  outline: 0;
+  border-color: rgb(255, 255, 255);
+  border-color: rgba(255, 255, 255, 1);
+  /* IE8 needs a non-glow hover state */
+  background-color: rgb(80, 80, 80);
+  background-color: rgba(50, 50, 50, 0.75);
+
+  -webkit-box-shadow: 0 0 3em #fff;
+     -moz-box-shadow: 0 0 3em #fff;
+          box-shadow: 0 0 3em #fff;
+
+  -webkit-transition: border 0s, -webkit-box-shadow 0s, -webkit-transform 0s;
+     -moz-transition: border 0s,    -moz-box-shadow 0s,    -moz-transform 0s;
+       -o-transition: border 0s,      -o-box-shadow 0s,      -o-transform 0s;
+          transition: border 0s,         box-shadow 0s,         transform 0s;
+}
+
+.vjs-default-skin .vjs-big-play-button:before {
+  content: "\e001"; /* Play icon */
+  font-family: VideoJS;
+  font-size: 3em;
+  line-height: 1.4;
+  text-shadow: 0.05em 0.05em 0.1em #000;
+  text-align: center; /* Needed for IE8 */
+
+  position: absolute;
+  left: 0;
+  width: 110%;
+  height: 100%;
+}
+
+/* Loading Spinner
+---------------------------------------------------------*/
+.vjs-loading-spinner {
+  display: none;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+
+  font-size: 5em;
+  line-height: 1;
+
+  width: 1em;
+  height: 1em;
+
+  margin-left: -0.5em;
+  margin-top: -0.5em;
+
+  opacity: 0.75;
+
+  -webkit-animation: spin 1.5s infinite linear;
+     -moz-animation: spin 1.5s infinite linear;
+       -o-animation: spin 1.5s infinite linear;
+          animation: spin 1.5s infinite linear;
+}
+
+.vjs-default-skin .vjs-loading-spinner:before {
+  content: "\e00a"; /* Loading spinner icon */
+  font-family: VideoJS;
+
+  position: absolute;
+  width: 1em;
+  height: 1em;
+  text-align: center;
+  text-shadow: 0em 0em 0.1em #000;
+}
+
+/* Add a gradient to the spinner by overlaying another copy.
+   Text gradient plus a text shadow doesn't work
+   and `background-clip: text` only works in Webkit. */
+.vjs-default-skin .vjs-loading-spinner:after {
+  content: "\e00a"; /* Loading spinner icon */
+  font-family: VideoJS;
+
+  position: absolute;
+  width: 1em;
+  height: 1em;
+  text-align: center;
+
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+@-moz-keyframes spin {
+  0% { -moz-transform: rotate(0deg); }
+  100% { -moz-transform: rotate(359deg); }
+}
+@-webkit-keyframes spin {
+  0% { -webkit-transform: rotate(0deg); }
+  100% { -webkit-transform: rotate(359deg); }
+}
+@-o-keyframes spin {
+  0% { -o-transform: rotate(0deg); }
+  100% { -o-transform: rotate(359deg); }
+}
+@-ms-keyframes spin {
+  0% { -ms-transform: rotate(0deg); }
+  100% { -ms-transform: rotate(359deg); }
+}
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(359deg); }
+}
+
+/* Menu Buttons (Captions/Subtitles/etc.)
+-------------------------------------------------------------------------------- */
+.vjs-default-skin .vjs-menu-button {
+  float: right;
+  cursor: pointer;
+}
+
+.vjs-default-skin .vjs-menu {
+  display: none;
+  position: absolute;
+  bottom: 0;
+  left: 0em; /* (Width of vjs-menu - width of button) / 2 */
+  width: 0em;
+  height: 0em;
+  margin-bottom: 3em;
+
+  border-left: 2em solid transparent;
+  border-right: 2em solid transparent;
+
+  border-top: 1.55em solid rgb(0, 0, 0); /* Same top as ul bottom */
+  border-top-color: rgba(7, 40, 50, 0.5); /* Same as ul background */
+}
+
+/* Button Pop-up Menu */
+.vjs-default-skin .vjs-menu-button .vjs-menu .vjs-menu-content {
+  display: block;
+  padding: 0; margin: 0;
+  position: absolute;
+  width: 10em;
+  bottom: 1.5em; /* Same bottom as vjs-menu border-top */
+  max-height: 15em;
+  overflow: auto;
+
+  left: -5em; /* Width of menu - width of button / 2 */
+
+  background-color: rgb(0, 0, 0);
+  background-color: rgba(7, 40, 50, 0.7);
+
+  -webkit-box-shadow: -20px -20px 0px rgba(255, 255, 255, 0.5);
+     -moz-box-shadow: 0 0 1em rgba(255, 255, 255, 0.5);
+          box-shadow: -0.2em -0.2em 0.3em rgba(255, 255, 255, 0.2);
+}
+
+/*.vjs-default-skin .vjs-menu-button:focus ul,*/ /* This is not needed because keyboard accessibility for the caption button is not handled with the focus any more. */
+.vjs-default-skin .vjs-menu-button:hover .vjs-menu {
+  display: block;
+}
+.vjs-default-skin .vjs-menu-button ul li {
+  list-style: none;
+  margin: 0;
+  padding: 0.3em 0 0.3em 0;
+  line-height: 1.4em;
+  font-size: 1.2em;
+  font-weight: normal;
+  text-align: center;
+  text-transform: lowercase;
+}
+.vjs-default-skin .vjs-menu-button ul li.vjs-selected {
+  background-color: #000;
+}
+.vjs-default-skin .vjs-menu-button ul li:focus,
+.vjs-default-skin .vjs-menu-button ul li:hover,
+.vjs-default-skin .vjs-menu-button ul li.vjs-selected:focus,
+.vjs-default-skin .vjs-menu-button ul li.vjs-selected:hover {
+  background-color: rgb(255, 255, 255);
+  background-color: rgba(255, 255, 255, 0.75);
+  color: #111;
+  outline: 0;
+
+  -webkit-box-shadow: 0 0 1em rgba(255, 255, 255, 1);
+     -moz-box-shadow: 0 0 1em rgba(255, 255, 255, 1);
+          box-shadow: 0 0 1em rgba(255, 255, 255, 1);
+}
+.vjs-default-skin .vjs-menu-button ul li.vjs-menu-title {
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 1em;
+  line-height: 2em;
+  padding: 0;
+  margin: 0 0 0.3em 0;
+  font-weight: bold;
+  cursor: default;
+}
+
+/* Subtitles Button */
+.vjs-default-skin .vjs-subtitles-button:before { content: "\e00c"; }
+
+/* There's unfortunately no CC button in FontAwesome, so we need
+    to use another font. Please +1 the fontawesome request.
+    https://github.com/FortAwesome/Font-Awesome/issues/968 */
+.vjs-default-skin .vjs-captions-button:before {
+  content: "\e008";
+}
+
+
+/* Replacement for focus outline */
+.vjs-default-skin .vjs-captions-button:focus .vjs-control-content:before,
+.vjs-default-skin .vjs-captions-button:hover .vjs-control-content:before {
+  -webkit-box-shadow: 0 0 1em rgba(255, 255, 255, 1);
+     -moz-box-shadow: 0 0 1em rgba(255, 255, 255, 1);
+          box-shadow: 0 0 1em rgba(255, 255, 255, 1);
+}
+
+/* Poster fix */
+.fluid-width-video-wrapper {
+	padding-top:none!important;
+	padding:none!important;
+}
+
+.video .video-js {
+width: 100%!important;
+height: 0px!important;
+padding-bottom: 56%!important;
+}
+
+
+/* ==========================================================================
+   Corporate Page Template Only
+   ========================================================================== */
+
+body.page-template-page-blank-template .page-header.col-md-8,
+body.page-template-page-blank-template div#toggle,
+body.page-template-page-blank-template footer#contact {
+    display: none!important;
+}
+
+body.page-template-page-blank-template {
+  background-position:0!important;
+  background-color:#1F1F1F!important;
+  background-image:none;
+}
+
+body.page-template-page-blank-template .wrap {
+    max-width: 100%;
+    padding:0;
+}

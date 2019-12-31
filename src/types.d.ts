@@ -5,6 +5,3 @@ declare module '@theme-ui/presets' {
 
   export = presets
 }
-
-// TODO: Get the real types for components
-declare module '@theme-ui/components'
