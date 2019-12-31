@@ -1,3 +1,5 @@
+declare module '*.jpg'
+declare module '*.png'
 declare module '@theme-ui/presets' {
   import { Theme } from 'theme-ui'
 

@@ -1,5 +1,6 @@
 import React from 'react'
 import { Styled } from 'theme-ui'
+import '../index.css'
 
 import Header from './Header'
 import { Box, Flex } from '@theme-ui/components'
