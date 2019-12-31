@@ -17,29 +17,46 @@ const Nav: React.FC = () => {
   return (
     <Flex
       as="nav"
-      sx={{ width: '100%', alignItems: 'center', justifyContent: 'center' }}
+      sx={{
+        width: '100%',
+        alignItems: 'center',
+        justifyContent: 'space-between',
+        fontSize: [1, 2],
+      }}
     >
-      <NavLink href="#!">home</NavLink>
+      <NavLink href="#!" color="white" sx={{ letterSpacing: 'normal' }}>
+        home
+      </NavLink>
 
       {verticalSeparator}
 
-      <NavLink href="#!">about</NavLink>
+      <NavLink href="#!" color="white" sx={{ letterSpacing: 'normal' }}>
+        about
+      </NavLink>
 
       {verticalSeparator}
 
-      <NavLink href="#!">songs</NavLink>
+      <NavLink href="#!" color="white" sx={{ letterSpacing: 'normal' }}>
+        songs
+      </NavLink>
 
       {verticalSeparator}
 
-      <NavLink href="#!">packages</NavLink>
+      <NavLink href="#!" color="white" sx={{ letterSpacing: 'normal' }}>
+        packages
+      </NavLink>
 
       {verticalSeparator}
 
-      <NavLink href="#!">videos</NavLink>
+      <NavLink href="#!" color="white" sx={{ letterSpacing: 'normal' }}>
+        videos
+      </NavLink>
 
       {verticalSeparator}
 
-      <NavLink href="#!">contact</NavLink>
+      <NavLink href="#!" color="white" sx={{ letterSpacing: 'normal' }}>
+        contact
+      </NavLink>
     </Flex>
   )
 }

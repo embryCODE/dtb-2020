@@ -8,7 +8,9 @@ const Header: React.FC = () => (
   <Box as="header">
     <ContactBanner />
     <Hero />
-    <Nav />
+    <Box p={3} mx="auto" sx={{ maxWidth: 940 }}>
+      <Nav />
+    </Box>
   </Box>
 )
 
