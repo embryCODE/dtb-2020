@@ -18,12 +18,20 @@ export default {
   colors: {
     ...base.colors,
     text: 'hsl(0, 0%, 86%)',
-    textDark: 'rgb(85, 85, 85)',
+    textDark: 'hsl(0, 0%, 36%)',
+    textDarker: 'hsl(0, 0%, 16%)',
     background: 'black',
     backgroundLight: 'rgb(248,248,248)',
     primary: 'hsl(193, 80%, 50%)',
     primaryDark: 'hsl(193, 80%, 36%)',
     secondary: 'hsl(293, 56%, 36%)',
+  },
+  links: {
+    nav: {
+      fontFamily: 'Caviar Dreams, serif',
+      textTransform: 'uppercase',
+      letterSpacing: '0.2em',
+    },
   },
   styles: {
     root: {
