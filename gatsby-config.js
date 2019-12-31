@@ -2,8 +2,34 @@
 module.exports = {
   siteMetadata: {
     title: `The Downtown Band`,
-    description: `Corporate Events • Private Parties • Weddings`,
+    description: `Live band available for corporate events, private parties, & weddings.`,
     author: `@embrycode`,
+    menuLinks: [
+      {
+        name: 'home',
+        link: '/',
+      },
+      {
+        name: 'about',
+        link: '/about',
+      },
+      {
+        name: 'songs',
+        link: '/songs',
+      },
+      {
+        name: 'packages',
+        link: '/packages',
+      },
+      {
+        name: 'videos',
+        link: '/videos',
+      },
+      {
+        name: 'contact',
+        link: '/contact',
+      },
+    ],
   },
   plugins: [
     `gatsby-plugin-react-helmet`,

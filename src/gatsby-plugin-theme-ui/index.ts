@@ -1,6 +1,6 @@
 import { base } from '@theme-ui/presets'
 
-export default {
+const theme = {
   ...base,
   fonts: {
     body: 'Verdana, Helvetica, sans-serif',
@@ -50,3 +50,5 @@ export default {
     },
   },
 }
+
+export default theme
