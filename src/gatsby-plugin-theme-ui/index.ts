@@ -26,6 +26,26 @@ const theme = {
     primaryDark: 'hsl(193, 80%, 36%)',
     secondary: 'hsl(293, 56%, 36%)',
   },
+  buttons: {
+    primary: {
+      fontWeight: 'bold',
+      color: 'white',
+      bg: 'primary',
+      transition: 'all .2s ease-in-out',
+      '&:hover': {
+        transform: 'scale(1.05)',
+      },
+    },
+    secondary: {
+      fontWeight: 'bold',
+      color: 'white',
+      bg: 'secondary',
+      transition: 'all .2s ease-in-out',
+      '&:hover': {
+        transform: 'scale(1.05)',
+      },
+    },
+  },
   links: {
     nav: {
       fontFamily: 'Caviar Dreams, serif',

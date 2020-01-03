@@ -5,6 +5,7 @@ import '../index.css'
 import Header from './Header'
 import { Box, Flex } from '@theme-ui/components'
 import Footer from './Footer'
+import purpleBG from '../assets/images/purple-bg.jpg'
 
 const Layout: React.FC = ({ children }) => {
   return (
@@ -21,7 +22,14 @@ const Layout: React.FC = ({ children }) => {
           <Header />
         </Box>
 
-        <Box as="main" sx={{ flex: '1 1 auto' }}>
+        <Box
+          as="main"
+          sx={{
+            flex: '1 1 auto',
+            background: `url(${purpleBG}) no-repeat center`,
+            backgroundSize: 'cover',
+          }}
+        >
           {children}
         </Box>
 

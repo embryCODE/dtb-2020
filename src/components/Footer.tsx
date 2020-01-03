@@ -5,7 +5,14 @@ import Nav from './Nav'
 
 const Footer: React.FC = () => {
   return (
-    <Box pt={4} pb={3} px={3} as="footer" sx={{ textAlign: 'center' }}>
+    <Box
+      bg="black"
+      pt={4}
+      pb={3}
+      px={3}
+      as="footer"
+      sx={{ textAlign: 'center' }}
+    >
       <Box
         mx="auto"
         sx={{
