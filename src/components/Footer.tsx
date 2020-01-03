@@ -16,7 +16,7 @@ const Footer: React.FC = () => {
       <Box
         mx="auto"
         sx={{
-          maxWidth: 520,
+          maxWidth: 650,
         }}
       >
         <Nav />

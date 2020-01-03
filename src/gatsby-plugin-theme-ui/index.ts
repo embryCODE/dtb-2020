@@ -17,7 +17,7 @@ const theme = {
   },
   colors: {
     ...base.colors,
-    text: 'hsl(0, 0%, 86%)',
+    text: 'hsl(0, 0%, 92%)',
     textDark: 'hsl(0, 0%, 36%)',
     textDarker: 'hsl(0, 0%, 16%)',
     background: 'black',
