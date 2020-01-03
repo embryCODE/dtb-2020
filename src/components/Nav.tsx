@@ -27,7 +27,8 @@ const Nav: React.FC = () => {
         width: '100%',
         alignItems: 'center',
         justifyContent: 'space-between',
-        fontSize: [0, 1, 2],
+        fontSize: [1, 1, 2],
+        flexDirection: ['column', 'row'],
       }}
     >
       {menuLinks.map(
@@ -41,7 +42,7 @@ const Nav: React.FC = () => {
                 },
               })}
             >
-              <NavLink as="span" color="inherit">
+              <NavLink as="span" color="inherit" mt={[1, 0]}>
                 {name}
               </NavLink>
             </Link>
@@ -52,7 +53,7 @@ const Nav: React.FC = () => {
                 sx={{
                   flexShrink: 0,
                   height: 50,
-                  display: 'inline-block',
+                  display: ['none', 'inline-block'],
                   borderRight: theme => `solid 1px ${theme.colors.textDarker}`,
                 }}
               />

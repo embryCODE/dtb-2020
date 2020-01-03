@@ -1,13 +1,16 @@
 import React from 'react'
-import { Flex, Link, Text } from '@theme-ui/components'
+import { Grid, Link, Text } from '@theme-ui/components'
 
 const ContactBanner: React.FC = () => {
   return (
-    <Flex
+    <Grid
+      columns={[1, 1, 3]}
+      gap={1}
+      px={3}
       py={2}
       color="textDark"
       bg="backgroundLight"
-      sx={{ justifyContent: 'space-around', fontSize: 11 }}
+      sx={{ fontSize: 11, textAlign: 'center' }}
     >
       <Text sx={{ fontWeight: 700 }}>
         email:{' '}
@@ -26,7 +29,7 @@ const ContactBanner: React.FC = () => {
       <Text sx={{ fontWeight: 700 }}>
         Corporate Events • Private Parties • Weddings
       </Text>
-    </Flex>
+    </Grid>
   )
 }
 
