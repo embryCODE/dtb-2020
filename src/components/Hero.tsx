@@ -3,6 +3,7 @@ import { Box } from '@theme-ui/components'
 import heroBg from '../assets/images/hero-bg.jpg'
 import { graphql, useStaticQuery } from 'gatsby'
 import Image from 'gatsby-image'
+import { APP_MAX_WIDTH } from '../config'
 
 const Hero: React.FC = () => {
   const data = useStaticQuery(graphql`
@@ -33,7 +34,7 @@ const Hero: React.FC = () => {
     >
       <Box
         sx={{
-          maxWidth: 1200,
+          maxWidth: APP_MAX_WIDTH,
           position: 'relative',
           margin: '0 auto',
         }}
@@ -51,7 +52,7 @@ const Hero: React.FC = () => {
       <Image
         fluid={data.bandShot.childImageSharp.fluid}
         alt="A photo of The Downtown Band"
-        style={{ width: '100%', maxWidth: 1200, margin: '0 auto' }}
+        style={{ width: '100%', maxWidth: APP_MAX_WIDTH, margin: '0 auto' }}
       />
     </Box>
   )
