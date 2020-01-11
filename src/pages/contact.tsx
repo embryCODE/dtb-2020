@@ -1,4 +1,4 @@
-import React, { FormEvent } from 'react'
+import React from 'react'
 import SEO from '../components/Seo'
 import Layout from '../components/Layout'
 import {
@@ -13,14 +13,9 @@ import {
 import { APP_MAX_WIDTH } from '../config'
 import Testimonials from '../components/Testimonials'
 import Videos from '../components/Videos'
+import { EMAIL_FOR_FORM_SUBMISSION } from '../config'
 
 const Contact: React.FC = () => {
-  const handleSubmit = (e: FormEvent) => {
-    e.preventDefault()
-    // TODO
-    console.log('Handle submit')
-  }
-
   return (
     <Layout>
       <SEO title="Contact" />
@@ -42,34 +37,42 @@ const Contact: React.FC = () => {
             live music entertainment needs.
           </Box>
 
-          <Box as="form" mt={4} onSubmit={handleSubmit}>
-            <Label htmlFor="name">Name*</Label>
-            <Input name="name" mb={3} required={true} />
+          <form
+            method="post"
+            action={`https://formspree.io/${EMAIL_FOR_FORM_SUBMISSION}`}
+          >
+            <Box mt={4}>
+              {/* To catch spam */}
+              <input type="text" name="_gotcha" style={{ display: 'none' }} />
 
-            <Label htmlFor="email">Email*</Label>
-            <Input type="email" name="email" mb={3} required={true} />
+              <Label htmlFor="name">Name*</Label>
+              <Input name="name" mb={3} required={true} />
 
-            <Label htmlFor="phone">Phone</Label>
-            <Input type="tel" name="phone" mb={3} />
+              <Label htmlFor="email">Email*</Label>
+              <Input type="email" name="email" mb={3} required={true} />
 
-            <Label htmlFor="date">Date of event</Label>
-            <Input type="date" name="date" mb={3} />
+              <Label htmlFor="phone">Phone</Label>
+              <Input type="tel" name="phone" mb={3} />
 
-            <Label htmlFor="location">
-              Location of event (venue, city, state)
-            </Label>
-            <Input name="location" mb={3} />
+              <Label htmlFor="date">Date of event</Label>
+              <Input type="date" name="date" mb={3} />
 
-            <Label htmlFor="type">Type of event</Label>
-            <Input name="type" mb={3} />
+              <Label htmlFor="location">
+                Location of event (venue, city, state)
+              </Label>
+              <Input name="location" mb={3} />
 
-            <Label htmlFor="referral">Where did you hear about us?</Label>
-            <Input name="referral" mb={3} />
+              <Label htmlFor="type">Type of event</Label>
+              <Input name="type" mb={3} />
 
-            <Label htmlFor="about">About your event</Label>
-            <Textarea name="about" rows={6} mb={3} />
-            <Button>Submit</Button>
-          </Box>
+              <Label htmlFor="referral">Where did you hear about us?</Label>
+              <Input name="referral" mb={3} />
+
+              <Label htmlFor="about">About your event</Label>
+              <Textarea name="about" rows={6} mb={3} />
+              <Button>Submit</Button>
+            </Box>
+          </form>
         </Box>
 
         <Box
