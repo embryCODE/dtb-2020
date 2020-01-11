@@ -24,7 +24,7 @@ const Home = () => (
         fontWeight: 'bold',
       }}
     >
-      <Videos />
+      <Videos withColumns={true} />
 
       <Grid mt={4} columns={[1, 2]} gap={4}>
         <Box>

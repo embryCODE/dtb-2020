@@ -1,12 +1,35 @@
 import React from 'react'
 import SEO from '../components/Seo'
 import Layout from '../components/Layout'
+import { APP_MAX_WIDTH } from '../config'
+import { Box, Flex } from '@theme-ui/components'
+import Testimonials from '../components/Testimonials'
+import Videos from '../components/Videos'
 
-const Videos: React.FC = () => (
+const VideosPage: React.FC = () => (
   <Layout>
     <SEO title="Videos" />
-    Videos
+    <Flex
+      mt={4}
+      mx="auto"
+      py={4}
+      px={3}
+      sx={{
+        maxWidth: APP_MAX_WIDTH,
+      }}
+    >
+      <Box mr={3} sx={{ flex: '1 1 auto' }}>
+        <Videos showHeading={true} />
+      </Box>
+
+      <Box
+        ml={3}
+        sx={{ flex: '0 0 30%', display: ['none', 'block'], minWidth: 250 }}
+      >
+        <Testimonials />
+      </Box>
+    </Flex>
   </Layout>
 )
 
-export default Videos
+export default VideosPage

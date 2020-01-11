@@ -30,7 +30,7 @@ const Contact: React.FC = () => {
         }}
       >
         <Box mr={3} sx={{ flex: '1 1 auto' }}>
-          <Heading mb={3}>Contact form</Heading>
+          <Heading mb={3}>Contact</Heading>
 
           <Box as="p">
             With a single email, The Downtown Band can take care of all your
