@@ -12,6 +12,7 @@ import {
 } from '@theme-ui/components'
 import { APP_MAX_WIDTH } from '../config'
 import Testimonials from '../components/Testimonials'
+import Videos from '../components/Videos'
 
 const Contact: React.FC = () => {
   const handleSubmit = (e: FormEvent) => {
@@ -75,9 +76,8 @@ const Contact: React.FC = () => {
           ml={3}
           sx={{ flex: '0 0 30%', display: ['none', 'block'], minWidth: 250 }}
         >
-          <Heading mb={3}>Testimonials</Heading>
-
-          <Testimonials />
+          <Videos showHeading={true} />
+          <Testimonials mt={4} />
         </Box>
       </Flex>
     </Layout>

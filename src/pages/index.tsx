@@ -5,8 +5,8 @@ import SEO from '../components/Seo'
 import { Box, Button, Grid, Link, Text } from '@theme-ui/components'
 import { Link as RouterLink } from 'gatsby'
 import { APP_MAX_WIDTH } from '../config'
-import purpleBG from '../assets/images/purple-bg.jpg'
 import YouTube from 'react-youtube-embed'
+import Videos from '../components/Videos'
 
 const Home = () => (
   <Layout>
@@ -24,10 +24,9 @@ const Home = () => (
         fontWeight: 'bold',
       }}
     >
-      <Grid columns={[1, 2]} gap={4}>
-        <YouTube id="https://www.youtube.com/embed/I6hmxc4fGXk" />
-        <YouTube id="https://www.youtube.com/embed/0WzacLIkK2c" />
+      <Videos />
 
+      <Grid mt={4} columns={[1, 2]} gap={4}>
         <Box>
           {/* TODO: Provide links to these claims */}
           <Text as="p">
