@@ -55,7 +55,7 @@ const Contact: React.FC = () => {
               <Input type="tel" name="phone" mb={3} />
 
               <Label htmlFor="date">Date of event</Label>
-              <Input type="date" name="date" mb={3} />
+              <Input type="date" name="date" mb={3} sx={{ minHeight: 42 }} />
 
               <Label htmlFor="location">
                 Location of event (venue, city, state)
