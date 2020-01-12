@@ -1,11 +1,9 @@
 import React from 'react'
-
 import Layout from '../components/Layout'
 import SEO from '../components/Seo'
 import { Box, Button, Grid, Link, Text } from '@theme-ui/components'
 import { Link as RouterLink } from 'gatsby'
 import { APP_MAX_WIDTH } from '../config'
-import YouTube from 'react-youtube-embed'
 import Videos from '../components/Videos'
 
 const Home = () => (

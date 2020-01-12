@@ -30,9 +30,9 @@ const Contact: React.FC = () => {
         }}
       >
         <Box mr={3} sx={{ flex: '1 1 auto' }}>
-          <Heading mb={3}>Contact</Heading>
+          <Heading sx={{ fontSize: 5 }}>Contact</Heading>
 
-          <Box as="p">
+          <Box mt={4} as="p">
             With a single email, The Downtown Band can take care of all your
             live music entertainment needs.
           </Box>

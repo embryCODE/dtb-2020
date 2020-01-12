@@ -20,7 +20,7 @@ const Songs: React.FC = () => (
       }}
     >
       <Box mr={3} sx={{ flex: '1 1 auto' }}>
-        <Heading>Songs</Heading>
+        <Heading sx={{ fontSize: 5 }}>Songs</Heading>
 
         <Heading mt={4} sx={{ fontSize: 3 }}>
           We&apos;re adding the newest Top 40 hits all the time!

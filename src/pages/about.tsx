@@ -22,9 +22,9 @@ const About: React.FC = () => (
       }}
     >
       <Box mr={3} sx={{ flex: '1 1 auto' }}>
-        <Heading mb={3}>About</Heading>
+        <Heading sx={{ fontSize: 5 }}>About</Heading>
 
-        <Heading sx={{ fontSize: 3 }}>
+        <Heading mt={4} sx={{ fontSize: 3 }}>
           Available for corporate events, private parties, & weddings.
         </Heading>
 

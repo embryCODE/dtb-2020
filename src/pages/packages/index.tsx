@@ -10,7 +10,7 @@ import ImageWithOverlay from '../../components/ImageWithOverlay'
 
 const Index: React.FC = () => (
   <Layout>
-    <SEO title="Index" />
+    <SEO title="Packages" />
 
     <Box
       mt={4}
