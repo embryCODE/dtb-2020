@@ -51,7 +51,7 @@ const DJs: React.FC = () => {
           </Box>
 
           <GatsbyLink to="/contact" style={{ textDecoration: 'none' }}>
-            <Link>Call or email for pricing</Link>
+            <Link as="span">Call or email for pricing</Link>
           </GatsbyLink>
         </Box>
 

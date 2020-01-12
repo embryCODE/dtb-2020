@@ -174,6 +174,7 @@ const SingleFAQ: React.FC<QuestionAndAnswer> = ({ question, answer }) => {
           color="black"
           bg="primary"
           sx={{
+            flexShrink: 0,
             borderRadius: '100%',
             width: 18,
             height: 18,

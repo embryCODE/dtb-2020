@@ -54,7 +54,7 @@ const DanceBand: React.FC = () => {
           </Box>
 
           <GatsbyLink to="/contact" style={{ textDecoration: 'none' }}>
-            <Link>Call or email for pricing</Link>
+            <Link as="span">Call or email for pricing</Link>
           </GatsbyLink>
 
           <Heading mt={4} sx={{ fontSize: 3 }}>
@@ -76,7 +76,7 @@ const DanceBand: React.FC = () => {
           </Box>
 
           <GatsbyLink to="/contact" style={{ textDecoration: 'none' }}>
-            <Link>Call or email for pricing</Link>
+            <Link as="span">Call or email for pricing</Link>
           </GatsbyLink>
 
           <Box
@@ -140,7 +140,7 @@ const DanceBand: React.FC = () => {
           </Box>
 
           <GatsbyLink to="/contact" style={{ textDecoration: 'none' }}>
-            <Link>Call or email for pricing</Link>
+            <Link as="span">Call or email for pricing</Link>
           </GatsbyLink>
         </Box>
 

@@ -52,7 +52,7 @@ const About: React.FC = () => (
         </Box>
         <Box as="p" mt={3}>
           <GatsbyLink to="/packages" style={{ textDecoration: 'none' }}>
-            <Link>Click HERE</Link>
+            <Link as="span">Click HERE</Link>
           </GatsbyLink>{' '}
           for The Downtown Band’s Entertainment Options
         </Box>
