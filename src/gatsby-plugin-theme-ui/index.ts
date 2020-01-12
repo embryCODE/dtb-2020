@@ -45,6 +45,16 @@ const theme = {
         transform: 'scale(1.05)',
       },
     },
+    tertiary: {
+      fontWeight: 'bold',
+      color: 'white',
+      bg: 'black',
+      transition: 'all .2s ease-in-out',
+      '&:hover': {
+        bg: '#1b1b1b',
+        transform: 'scale(1.05)',
+      },
+    },
   },
   links: {
     nav: {
