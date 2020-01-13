@@ -59,7 +59,7 @@ const Nav: React.FC = () => {
   )
 
   return (
-    <Box p={[0, 3]} sx={{ position: 'relative' }}>
+    <Box p={[0, 3]} bg="black" sx={{ position: 'relative' }}>
       <MenuButton
         sx={{
           cursor: 'pointer',
@@ -82,7 +82,6 @@ const Nav: React.FC = () => {
             justifyContent: 'space-between',
             fontSize: [1, 1, 2],
             flexDirection: ['column', 'row'],
-            bg: 'black',
           }}
         >
           {links}
