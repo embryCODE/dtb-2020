@@ -12,7 +12,7 @@ const IconLink: React.FC<IconLinkProps> = ({ href, ...otherProps }) => {
       <Image
         {...otherProps}
         sx={{
-          width: 200,
+          width: 100,
           height: 'auto',
           cursor: 'pointer',
           filter: 'grayscale(70%)',

@@ -61,7 +61,7 @@ const Home = () => (
 
       <Videos mt={5} withColumns={true} />
 
-      <Grid mt={4} columns={[1, 2]} gap={4}>
+      <Grid mt={4} columns={[1, 2]}>
         <Text as="p">
           The Downtown Band is a high-energy, dance-driven cover band that
           delivers top quality live entertainment. This 5 to 10-piece group can
@@ -69,29 +69,19 @@ const Home = () => (
           cocktail hour.
         </Text>
 
-        <Box>
-          <Box
-            as="p"
-            sx={{
-              fontFamily: 'Caviar Dreams',
-              fontSize: 4,
-              fontWeight: 'bold',
-            }}
-          >
-            Performed for{' '}
-            <Link href="http://www.eltonjohn.com/">Elton John</Link>,{' '}
-            <Link href="http://www.sting.com/">Sting</Link>,{' '}
-            <Link href="https://en.wikipedia.org/wiki/David_Letterman#External_links">
-              David Letterman
-            </Link>
-            , <Link href="http://www.seal.com/">Seal</Link>,{' '}
-            <Link href="http://www.jimmyfallon.com/">Jimmy Fallon</Link>,{' '}
-            <Link href="https://www.robinthicke.com/">Robin Thicke</Link>,{' '}
-            <Link href="https://lanadelrey.com/">Lana Del Rey</Link>,{' '}
-            <Link href="https://enriqueiglesias.com/">Enrique Iglesias</Link>,{' '}
-            <Link href="https://timmcgraw.com/">Tim McGraw</Link>,{' '}
-            <Link href="https://www.rascalflatts.com/">Rascal Flatts</Link>,
-          </Box>
+        <Box as="p">
+          Performed for <Link href="http://www.eltonjohn.com/">Elton John</Link>
+          , <Link href="http://www.sting.com/">Sting</Link>,{' '}
+          <Link href="https://en.wikipedia.org/wiki/David_Letterman#External_links">
+            David Letterman
+          </Link>
+          , <Link href="http://www.seal.com/">Seal</Link>,{' '}
+          <Link href="http://www.jimmyfallon.com/">Jimmy Fallon</Link>,{' '}
+          <Link href="https://www.robinthicke.com/">Robin Thicke</Link>,{' '}
+          <Link href="https://lanadelrey.com/">Lana Del Rey</Link>,{' '}
+          <Link href="https://enriqueiglesias.com/">Enrique Iglesias</Link>,{' '}
+          <Link href="https://timmcgraw.com/">Tim McGraw</Link>,{' '}
+          <Link href="https://www.rascalflatts.com/">Rascal Flatts</Link>,
         </Box>
       </Grid>
 
@@ -102,7 +92,7 @@ const Home = () => (
           Corporate Events
         </Heading>
 
-        <Grid mt={5} columns={[2, 3, 4]} gap={5}>
+        <Grid mt={5} columns={[4, 4, 7]} gap={5} sx={{ alignItems: 'center' }}>
           <IconLink
             alt="Southwest Airlines icon"
             src={southwest}
