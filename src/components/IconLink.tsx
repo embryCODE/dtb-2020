@@ -15,8 +15,8 @@ const IconLink: React.FC<IconLinkProps> = ({ href, ...otherProps }) => {
           width: 100,
           height: 'auto',
           cursor: 'pointer',
-          filter: 'grayscale(70%)',
-          opacity: 0.8,
+          filter: 'grayscale(80%)',
+          opacity: 0.85,
           '&:hover': { filter: 'grayscale(0)', opacity: 1 },
         }}
       />
