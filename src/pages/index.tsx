@@ -92,7 +92,7 @@ const Home = () => (
           Corporate Events
         </Heading>
 
-        <Grid mt={5} columns={[4, 4, 7]} gap={5} sx={{ alignItems: 'center' }}>
+        <Grid mt={4} columns={[4, 4, 7]} gap={5} sx={{ alignItems: 'center' }}>
           <IconLink
             alt="Southwest Airlines icon"
             src={southwest}
