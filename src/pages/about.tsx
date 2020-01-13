@@ -22,9 +22,11 @@ const About: React.FC = () => (
       }}
     >
       <Box mr={3} sx={{ flex: '1 1 auto' }}>
-        <Heading sx={{ fontSize: 5 }}>About</Heading>
+        <Heading as="h1" sx={{ fontSize: 5 }}>
+          About
+        </Heading>
 
-        <Heading mt={4} sx={{ fontSize: 3 }}>
+        <Heading mt={4}>
           Available for corporate events, private parties, & weddings.
         </Heading>
 
@@ -57,9 +59,7 @@ const About: React.FC = () => (
           for The Downtown Band’s Entertainment Options
         </Box>
 
-        <Heading mt={4} sx={{ fontSize: 3 }}>
-          Corporate events
-        </Heading>
+        <Heading mt={4}>Corporate events</Heading>
 
         <Box mt={3} as="p">
           Corporations from Nashville and all over the world who book only the
@@ -72,9 +72,7 @@ const About: React.FC = () => (
           with a night of music, lights, dancing and non-stop fun.
         </Box>
 
-        <Heading mt={4} sx={{ fontSize: 3 }}>
-          Weddings
-        </Heading>
+        <Heading mt={4}>Weddings</Heading>
 
         <Box mt={3} as="p">
           From Grand Entrance to first dance to your unique sendoff, The

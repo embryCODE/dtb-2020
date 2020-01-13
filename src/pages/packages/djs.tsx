@@ -23,17 +23,17 @@ const DJs: React.FC = () => {
         }}
       >
         <Box mr={3} sx={{ flex: '1 1 auto' }}>
-          <Heading sx={{ fontSize: 5 }}>DJs</Heading>
+          <Heading as="h1" sx={{ fontSize: 5 }}>
+            DJs
+          </Heading>
 
-          <Box mt={4} color="primary" sx={{ fontSize: 1, fontStyle: 'italic' }}>
+          <Box mt={4} color="primary" sx={{ fontStyle: 'italic' }}>
             The Downtown Band has packages to fit your needs. Call or write to
             talk about custom options for your corporate event, private party,
             or wedding. Common packages include:
           </Box>
 
-          <Heading mt={5} sx={{ fontSize: 3 }}>
-            THE DOWNTOWN BAND – DJs
-          </Heading>
+          <Heading mt={5}>THE DOWNTOWN BAND – DJs</Heading>
 
           <Box as="p" mt={3}>
             Not ready for the night to end?! Keep it rocking with The Downtown

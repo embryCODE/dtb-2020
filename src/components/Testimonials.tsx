@@ -15,7 +15,7 @@ const Testimonials: React.FC<BoxProps> = props => {
         mt={3}
         name="Karen G."
         location="Orlando, FL"
-        quote="'ONE_MORE_SONG! ONE_MORE_SONG!' This was the last moment of our party as all the guests were jam-packed on the dance floor. Amazing!"
+        quote="ONE MORE SONG! ONE MORE SONG! This was the last moment of our party as all the guests were jam-packed on the dance floor. Amazing!"
       />
       <Testimonial
         mt={3}

@@ -32,18 +32,21 @@ const ImageWithOverlay: React.FC<ImageWithOverlayProps> = ({
         </Heading>
         <Link to={linkTo} style={{ pointerEvents: 'all', cursor: 'default' }}>
           <Button mt={3} variant="tertiary">
-            Click Here
+            Click here
           </Button>
         </Link>
       </Flex>
 
-      <Box
-        sx={{
-          opacity: 0.6,
-          '&:hover': { opacity: 1 },
-        }}
-      >
-        {children}
+      <Box sx={{ overflow: 'hidden' }}>
+        <Box
+          sx={{
+            opacity: 0.6,
+            transition: 'transform .3s ease-in-out',
+            '&:hover': { opacity: 1, transform: 'scale(1.05)' },
+          }}
+        >
+          {children}
+        </Box>
       </Box>
     </Box>
   )

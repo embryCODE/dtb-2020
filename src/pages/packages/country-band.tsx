@@ -22,17 +22,17 @@ const CountryBand: React.FC = () => {
         }}
       >
         <Box mr={3} sx={{ flex: '1 1 auto' }}>
-          <Heading sx={{ fontSize: 5 }}>Country Band</Heading>
+          <Heading as="h1" sx={{ fontSize: 5 }}>
+            Country Band
+          </Heading>
 
-          <Box mt={4} color="primary" sx={{ fontSize: 1, fontStyle: 'italic' }}>
+          <Box mt={4} color="primary" sx={{ fontStyle: 'italic' }}>
             The Downtown Band has packages to fit your needs. Call or write to
             talk about custom options for your corporate event, private party,
             or wedding. Common packages include:
           </Box>
 
-          <Heading mt={5} sx={{ fontSize: 3 }}>
-            THE DOWNTOWN BAND – COUNTRY
-          </Heading>
+          <Heading mt={5}>THE DOWNTOWN BAND – COUNTRY</Heading>
 
           <Box as="p" mt={3}>
             We bring the Honky Tonks straight to your event! Featuring
@@ -57,7 +57,7 @@ const CountryBand: React.FC = () => {
             <Link as="span">Call or email for pricing</Link>
           </GatsbyLink>
 
-          <Heading mt={4} sx={{ fontSize: 3 }}>
+          <Heading mt={4}>
             THE DOWNTOWN BAND – &ldquo;TASTE OF NASHVILLE&rdquo;
           </Heading>
 

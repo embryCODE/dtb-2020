@@ -17,6 +17,7 @@ const Footer: React.FC = () => {
         mx="auto"
         sx={{
           maxWidth: 650,
+          display: ['none', 'block'],
         }}
       >
         <Nav />

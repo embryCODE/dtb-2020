@@ -1,10 +1,26 @@
 import React from 'react'
 import Layout from '../components/Layout'
 import SEO from '../components/Seo'
-import { Box, Button, Grid, Link, Text } from '@theme-ui/components'
+import {
+  Box,
+  Button,
+  Grid,
+  Heading,
+  Link,
+  Text,
+  Flex,
+} from '@theme-ui/components'
 import { Link as RouterLink } from 'gatsby'
 import { APP_MAX_WIDTH } from '../config'
 import Videos from '../components/Videos'
+import southwest from '../assets/images/southwest-trans.png'
+import coke from '../assets/images/coke-trans.png'
+import ford from '../assets/images/ford-trans.png'
+import frito from '../assets/images/frito-trans.png'
+import microsoft from '../assets/images/microsoft-trans1.png'
+import nbc from '../assets/images/nbc-trans1.png'
+import ritz from '../assets/images/ritz-trans.png'
+import IconLink from '../components/IconLink'
 
 const Home = () => (
   <Layout>
@@ -17,59 +33,105 @@ const Home = () => (
       sx={{
         width: '100%',
         maxWidth: APP_MAX_WIDTH,
-        fontFamily: 'Caviar Dreams',
-        fontSize: 3,
-        fontWeight: 'bold',
       }}
     >
-      <Videos withColumns={true} />
-
-      <Grid mt={4} columns={[1, 2]} gap={4}>
+      <Grid mt={3} columns={[1, 2]} gap={4}>
         <Box>
-          {/* TODO: Provide links to these claims */}
-          <Text as="p">
+          <Text sx={{ fontSize: 4 }}>
             Voted{' '}
-            <Link href="https://google.com">
+            <Box as="span" color="primary">
               &ldquo;Best Live Band in Tennessee&rdquo;
-            </Link>{' '}
+            </Box>{' '}
             &{' '}
-            <Link href="https://google.com">
+            <Box as="span" color="primary">
               &ldquo;Top 10 Best Live Band in United States&rdquo;
-            </Link>{' '}
-            3 years in a row by The Industry Expert Awards!
-          </Text>
-
-          <Text as="p" mt={4}>
-            The Downtown Band is a high-energy, dance-driven cover band that
-            delivers top quality live entertainment. This 5 to 10-piece group
-            can play everything from your full blown after party to an elegant
-            cocktail hour.
+            </Box>{' '}
+            three years in a row by The Industry Expert Awards!
           </Text>
         </Box>
 
-        <Box>
-          <Box as="p">
-            DTB has performed with a star-studded roster of clients, including:
-          </Box>
+        <Flex sx={{ justifyContent: 'center', alignItems: 'center' }}>
+          <RouterLink to="/contact">
+            <Button sx={{ height: 80, width: 350, fontSize: 4 }}>
+              Contact us!
+            </Button>
+          </RouterLink>
+        </Flex>
+      </Grid>
 
-          <Box as="p" mt={4}>
-            Elton John, Sting, David Letterman, Seal, Jimmy Fallon, Robin
-            Thicke, Lana Del Rey, Enrique Iglesias, Tim McGraw, Rascal Flatts,
-            Southwest Airlines, Frito Lay, Coca Cola, NBC, Microsoft, Ford, The
-            Ritz-Carlton
+      <Videos mt={5} withColumns={true} />
+
+      <Grid mt={4} columns={[1, 2]} gap={4}>
+        <Text as="p">
+          The Downtown Band is a high-energy, dance-driven cover band that
+          delivers top quality live entertainment. This 5 to 10-piece group can
+          play everything from your full blown after party to an elegant
+          cocktail hour.
+        </Text>
+
+        <Box>
+          <Box
+            as="p"
+            sx={{
+              fontFamily: 'Caviar Dreams',
+              fontSize: 4,
+              fontWeight: 'bold',
+            }}
+          >
+            Performed for{' '}
+            <Link href="http://www.eltonjohn.com/">Elton John</Link>,{' '}
+            <Link href="http://www.sting.com/">Sting</Link>,{' '}
+            <Link href="https://en.wikipedia.org/wiki/David_Letterman#External_links">
+              David Letterman
+            </Link>
+            , <Link href="http://www.seal.com/">Seal</Link>,{' '}
+            <Link href="http://www.jimmyfallon.com/">Jimmy Fallon</Link>,{' '}
+            <Link href="https://www.robinthicke.com/">Robin Thicke</Link>,{' '}
+            <Link href="https://lanadelrey.com/">Lana Del Rey</Link>,{' '}
+            <Link href="https://enriqueiglesias.com/">Enrique Iglesias</Link>,{' '}
+            <Link href="https://timmcgraw.com/">Tim McGraw</Link>,{' '}
+            <Link href="https://www.rascalflatts.com/">Rascal Flatts</Link>,
           </Box>
         </Box>
       </Grid>
 
-      <Box as="p" mt={5} sx={{ maxWidth: 580 }}>
-        To get your own party started, start by clicking this shiny button!
-      </Box>
+      <Box mt={5} as="hr" />
 
-      <RouterLink to="/contact">
-        <Button mt={4} sx={{ height: 80, width: 240 }}>
-          Contact us!
-        </Button>
-      </RouterLink>
+      <Box mt={4}>
+        <Heading color="primary" sx={{ textAlign: 'center', fontSize: 5 }}>
+          Corporate Events
+        </Heading>
+
+        <Grid mt={5} columns={[2, 3, 4]} gap={5}>
+          <IconLink
+            alt="Southwest Airlines icon"
+            src={southwest}
+            href="http://www.southwest.com/"
+          />
+          <IconLink
+            alt="Frito Lay icon"
+            src={frito}
+            href="http://www.fritolay.com/"
+          />
+          <IconLink
+            alt="Coca Cola icon"
+            src={coke}
+            href="http://coca-cola.com/"
+          />
+          <IconLink alt="Ford icon" src={ford} href="http://www.ford.com/" />
+          <IconLink
+            alt="Microsoft icon"
+            src={microsoft}
+            href="https://www.microsoft.com/"
+          />
+          <IconLink alt="NBC icon" src={nbc} href="http://www.nbc.com/" />
+          <IconLink
+            alt="Ritz-Carlton icon"
+            src={ritz}
+            href="http://www.ritzcarlton.com/"
+          />
+        </Grid>
+      </Box>
     </Box>
   </Layout>
 )

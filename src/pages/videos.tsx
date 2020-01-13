@@ -19,7 +19,9 @@ const VideosPage: React.FC = () => (
       }}
     >
       <Box mr={3} sx={{ flex: '1 1 auto' }}>
-        <Heading sx={{ fontSize: 5 }}>Videos</Heading>
+        <Heading as="h1" sx={{ fontSize: 5 }}>
+          Videos
+        </Heading>
 
         <Videos mt={4} />
       </Box>

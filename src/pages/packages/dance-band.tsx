@@ -22,15 +22,17 @@ const DanceBand: React.FC = () => {
         }}
       >
         <Box mr={3} sx={{ flex: '1 1 auto' }}>
-          <Heading sx={{ fontSize: 5 }}>Dance Band</Heading>
+          <Heading as="h1" sx={{ fontSize: 5 }}>
+            Dance Band
+          </Heading>
 
-          <Box mt={4} color="primary" sx={{ fontSize: 1, fontStyle: 'italic' }}>
+          <Box mt={4} color="primary" sx={{ fontStyle: 'italic' }}>
             The Downtown Band has packages to fit your needs. Call or write to
             talk about custom options for your corporate event, private party,
             or wedding. Common packages include:
           </Box>
 
-          <Heading mt={5} sx={{ fontSize: 3 }}>
+          <Heading mt={5}>
             THE DOWNTOWN BAND – GRANDE!!! (10-PIECE) *best deal*
           </Heading>
 
@@ -57,7 +59,7 @@ const DanceBand: React.FC = () => {
             <Link as="span">Call or email for pricing</Link>
           </GatsbyLink>
 
-          <Heading mt={4} sx={{ fontSize: 3 }}>
+          <Heading mt={4}>
             THE DOWNTOWN BAND – CLASSIC (6-PIECE) *most popular*
           </Heading>
 
@@ -79,18 +81,16 @@ const DanceBand: React.FC = () => {
             <Link as="span">Call or email for pricing</Link>
           </GatsbyLink>
 
+          <Box mt={5} as="hr" />
           <Box
-            mt={5}
+            mt={3}
             color="primary"
-            sx={{ fontSize: 1, fontStyle: 'italic', textAlign: 'center' }}
+            sx={{ fontStyle: 'italic', textAlign: 'center' }}
           >
-            . . . . . . . . . . . . . . . . Additional Options . . . . . . . . .
-            . . . . . . .
+            Additional Options
           </Box>
 
-          <Heading mt={4} sx={{ fontSize: 3 }}>
-            WEDDING CEREMONY MUSIC
-          </Heading>
+          <Heading mt={4}>WEDDING CEREMONY MUSIC</Heading>
 
           <Box as="p" mt={3}>
             String quartets, solo cello, harp, piano, singers, organist, brass,
@@ -98,9 +98,7 @@ const DanceBand: React.FC = () => {
             untraditional.
           </Box>
 
-          <Heading mt={4} sx={{ fontSize: 3 }}>
-            JAZZ (4-7 PIECE ENSEMBLE)
-          </Heading>
+          <Heading mt={4}>JAZZ (4-7 PIECE ENSEMBLE)</Heading>
 
           <Box as="p" mt={3}>
             For cocktails or dinner, the group breaks down to 4 to 7-piece
@@ -110,9 +108,7 @@ const DanceBand: React.FC = () => {
             the group.
           </Box>
 
-          <Heading mt={4} sx={{ fontSize: 3 }}>
-            COCKTAIL HOUR (PIANO/VOCAL)
-          </Heading>
+          <Heading mt={4}>COCKTAIL HOUR (PIANO/VOCAL)</Heading>
 
           <Box as="p" mt={3}>
             Pair a jazz pianist with the smooth as silk vocal stylings of Justin
@@ -122,7 +118,7 @@ const DanceBand: React.FC = () => {
             Buble to smooth renditions of current hit songs.
           </Box>
 
-          <Heading mt={4} sx={{ fontSize: 3 }}>
+          <Heading mt={4}>
             ADD THE UPTOWN GIRL SINGER/DANCERS TO ANY PACKAGE
           </Heading>
 
@@ -131,7 +127,7 @@ const DanceBand: React.FC = () => {
             energy.
           </Box>
 
-          <Heading mt={4} sx={{ fontSize: 3 }}>
+          <Heading mt={4}>
             ADD THE &ldquo;DTB HORN SECTION&rdquo; TO ANY PACKAGE
           </Heading>
 

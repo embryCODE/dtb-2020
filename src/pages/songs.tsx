@@ -20,13 +20,15 @@ const Songs: React.FC = () => (
       }}
     >
       <Box mr={3} sx={{ flex: '1 1 auto' }}>
-        <Heading sx={{ fontSize: 5 }}>Songs</Heading>
+        <Heading as="h1" sx={{ fontSize: 5 }}>
+          Songs
+        </Heading>
 
-        <Heading mt={4} sx={{ fontSize: 3 }}>
+        <Heading mt={4}>
           We&apos;re adding the newest Top 40 hits all the time!
         </Heading>
 
-        <Box mt={3} color="primary" sx={{ fontSize: 1, fontStyle: 'italic' }}>
+        <Box mt={3} color="primary" sx={{ fontStyle: 'italic' }}>
           <sup>*</sup> Other styles available upon request: Country music, R&B,
           Latin, Jazz
         </Box>
@@ -43,8 +45,8 @@ const Songs: React.FC = () => (
           Eric Clapton, Journey, AC/DC, The Police, James Taylor, James Brown,
           Rick Springfield, Patsy Cline, Foster the People, Garth Brooks, KC &
           the Sunshine Band, Buddy Holly, The Beatles, Jackson 5, U2, Lionel
-          Richie, Marvin Gaye, Michael Buble, Rolling Stones, Temptations, Train
-          … and a ton more artists!
+          Richie, Marvin Gaye, Michael Buble, Rolling Stones, Temptations,
+          Train, and a ton more artists!
         </Box>
 
         <Heading mt={4}>UP-TEMPO DANCE SONGS</Heading>
@@ -539,7 +541,7 @@ const Songs: React.FC = () => (
         </Box>
 
         <Box as="p" mt={4}>
-          . . . and many more being added all the time . . .
+          Many more songs being added all the time&hellip;
         </Box>
       </Box>
 

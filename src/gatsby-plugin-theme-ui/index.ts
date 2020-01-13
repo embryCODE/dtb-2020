@@ -24,13 +24,21 @@ const theme = {
     backgroundLight: 'rgb(248,248,248)',
     primary: 'hsl(193, 80%, 50%)',
     primaryDark: 'hsl(193, 80%, 36%)',
-    secondary: 'hsl(293, 56%, 36%)',
+    secondary: '#662E9B',
+  },
+  text: {
+    heading: {
+      fontFamily: 'Caviar Dreams',
+      fontWeight: 'heading',
+      color: 'white',
+    },
   },
   buttons: {
     primary: {
       fontWeight: 'bold',
       color: 'white',
       bg: 'primary',
+      cursor: 'pointer',
       transition: 'all .2s ease-in-out',
       '&:hover': {
         transform: 'scale(1.05)',
@@ -40,6 +48,7 @@ const theme = {
       fontWeight: 'bold',
       color: 'white',
       bg: 'secondary',
+      cursor: 'pointer',
       transition: 'all .2s ease-in-out',
       '&:hover': {
         transform: 'scale(1.05)',
@@ -49,10 +58,11 @@ const theme = {
       fontWeight: 'bold',
       color: 'white',
       bg: 'black',
+      cursor: 'pointer',
       transition: 'all .2s ease-in-out',
       '&:hover': {
-        bg: '#1b1b1b',
-        transform: 'scale(1.05)',
+        bg: 'secondary',
+        transform: 'scale(1.10)',
       },
     },
   },
