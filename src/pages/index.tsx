@@ -51,15 +51,31 @@ const Home = () => (
         </Box>
 
         <Flex sx={{ justifyContent: 'center', alignItems: 'center' }}>
-          <RouterLink to="/contact">
-            <Button sx={{ height: 80, width: 350, fontSize: 4 }}>
+          <Button
+            as="div"
+            sx={{
+              display: 'flex',
+              alignItems: 'center',
+              justifyContent: 'center',
+              height: 80,
+              width: 350,
+              fontSize: 4,
+              maxWidth: '100%',
+            }}
+          >
+            <RouterLink
+              to="/contact"
+              style={{ color: 'inherit', textDecoration: 'none' }}
+            >
               Contact us!
-            </Button>
-          </RouterLink>
+            </RouterLink>
+          </Button>
         </Flex>
       </Grid>
 
-      <Videos mt={5} withColumns={true} />
+      <Box mx="auto" my={5} sx={{ maxWidth: 800 }}>
+        <Videos links={['https://www.youtube.com/embed/I6hmxc4fGXk']} />
+      </Box>
 
       <Grid mt={4} columns={[1, 2]}>
         <Text as="p">

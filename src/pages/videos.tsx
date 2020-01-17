@@ -13,23 +13,29 @@ const VideosPage: React.FC = () => (
       mt={4}
       mx="auto"
       py={4}
-      px={3}
+      px={-3}
       sx={{
         maxWidth: APP_MAX_WIDTH,
+        flexWrap: ['wrap', 'nowrap'],
       }}
     >
-      <Box mr={3} sx={{ flex: '1 1 auto' }}>
+      <Box px={3} sx={{ width: ['100%', '66%'] }}>
         <Heading as="h1" sx={{ fontSize: 5 }}>
           Videos
         </Heading>
 
-        <Videos mt={4} />
+        <Videos
+          mt={4}
+          links={[
+            'https://www.youtube.com/embed/I6hmxc4fGXk',
+            'https://www.youtube.com/embed/0WzacLIkK2c',
+            'https://youtu.be/l_RRHV0CbE8',
+            'https://youtu.be/WPqXmQI0Flg',
+          ]}
+        />
       </Box>
 
-      <Box
-        ml={3}
-        sx={{ flex: '0 0 30%', display: ['none', 'block'], minWidth: 250 }}
-      >
+      <Box mt={[4, 0]} px={3} sx={{ width: ['100%', '33%'], minWidth: 300 }}>
         <Testimonials />
       </Box>
     </Flex>

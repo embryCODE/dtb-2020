@@ -17,12 +17,13 @@ const DJs: React.FC = () => {
         mt={4}
         mx="auto"
         py={4}
-        px={3}
+        px={-3}
         sx={{
           maxWidth: APP_MAX_WIDTH,
+          flexWrap: ['wrap', 'nowrap'],
         }}
       >
-        <Box mr={3} sx={{ flex: '1 1 auto' }}>
+        <Box px={3} sx={{ width: ['100%', 'auto'] }}>
           <Heading as="h1" sx={{ fontSize: 5 }}>
             DJs
           </Heading>
@@ -32,6 +33,11 @@ const DJs: React.FC = () => {
             talk about custom options for your corporate event, private party,
             or wedding. Common packages include:
           </Box>
+
+          <Grid mt={4} columns={[1, 2]}>
+            <Image alt="An image of a dj" src={dj2} />
+            <Image alt="An image of a dj" src={dj1} />
+          </Grid>
 
           <Heading mt={5}>THE DOWNTOWN BAND – DJs</Heading>
 
@@ -55,14 +61,7 @@ const DJs: React.FC = () => {
           </GatsbyLink>
         </Box>
 
-        <Box
-          ml={3}
-          sx={{ flex: '0 0 30%', display: ['none', 'block'], minWidth: 250 }}
-        >
-          <Grid gap={5}>
-            <Image alt="An image of a dj" src={dj2} />
-            <Image alt="An image of a dj" src={dj1} />
-          </Grid>
+        <Box mt={[4, 0]} px={3} sx={{ width: ['100%', '33%'], minWidth: 300 }}>
           <Testimonials mt={4} />
         </Box>
       </Flex>

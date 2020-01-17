@@ -16,12 +16,13 @@ const DanceBand: React.FC = () => {
         mt={4}
         mx="auto"
         py={4}
-        px={3}
+        px={-3}
         sx={{
           maxWidth: APP_MAX_WIDTH,
+          flexWrap: ['wrap', 'nowrap'],
         }}
       >
-        <Box mr={3} sx={{ flex: '1 1 auto' }}>
+        <Box px={3} sx={{ width: ['100%', 'auto'] }}>
           <Heading as="h1" sx={{ fontSize: 5 }}>
             Dance Band
           </Heading>
@@ -31,6 +32,8 @@ const DanceBand: React.FC = () => {
             talk about custom options for your corporate event, private party,
             or wedding. Common packages include:
           </Box>
+
+          <Videos mt={4} withColumns={true} />
 
           <Heading mt={5}>
             THE DOWNTOWN BAND – GRANDE!!! (10-PIECE) *best deal*
@@ -140,11 +143,7 @@ const DanceBand: React.FC = () => {
           </GatsbyLink>
         </Box>
 
-        <Box
-          ml={3}
-          sx={{ flex: '0 0 30%', display: ['none', 'block'], minWidth: 250 }}
-        >
-          <Videos showHeading={true} />
+        <Box mt={[4, 0]} px={3} sx={{ width: ['100%', '33%'], minWidth: 300 }}>
           <Testimonials mt={4} />
         </Box>
       </Flex>
