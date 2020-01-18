@@ -101,7 +101,8 @@ const Home = () => (
           <Link href="https://lanadelrey.com/">Lana Del Rey</Link>,{' '}
           <Link href="https://enriqueiglesias.com/">Enrique Iglesias</Link>,{' '}
           <Link href="https://timmcgraw.com/">Tim McGraw</Link>,{' '}
-          <Link href="https://www.rascalflatts.com/">Rascal Flatts</Link>,
+          <Link href="https://www.rascalflatts.com/">Rascal Flatts</Link>, and
+          YOU!
         </Box>
       </Grid>
 
