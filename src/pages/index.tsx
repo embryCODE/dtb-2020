@@ -51,25 +51,29 @@ const Home = () => (
         </Box>
 
         <Flex sx={{ justifyContent: 'center', alignItems: 'center' }}>
-          <Button
-            as="div"
-            sx={{
-              display: 'flex',
-              alignItems: 'center',
-              justifyContent: 'center',
-              height: 80,
-              width: 350,
-              fontSize: 4,
+          <RouterLink
+            to="/contact"
+            style={{
+              color: 'inherit',
+              textDecoration: 'none',
               maxWidth: '100%',
             }}
           >
-            <RouterLink
-              to="/contact"
-              style={{ color: 'inherit', textDecoration: 'none' }}
+            <Button
+              as="div"
+              sx={{
+                display: 'flex',
+                alignItems: 'center',
+                justifyContent: 'center',
+                height: 80,
+                width: 350,
+                fontSize: 4,
+                maxWidth: '100%',
+              }}
             >
               Contact us!
-            </RouterLink>
-          </Button>
+            </Button>
+          </RouterLink>
         </Flex>
       </Grid>
 
