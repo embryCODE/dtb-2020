@@ -10,14 +10,11 @@ import purpleBG from '../assets/images/purple-bg.jpg'
 const Layout: React.FC = ({ children }) => {
   return (
     <Styled.root>
-      <Box sx={{ flex: '0 0 auto' }}>
-        <Header />
-      </Box>
+      <Header />
 
       <Box
         as="main"
         sx={{
-          flex: '1 1 auto',
           background: `url(${purpleBG}) no-repeat center`,
           backgroundSize: 'cover',
         }}
@@ -25,9 +22,7 @@ const Layout: React.FC = ({ children }) => {
         {children}
       </Box>
 
-      <Box sx={{ flex: '0 0 auto' }}>
-        <Footer />
-      </Box>
+      <Footer />
     </Styled.root>
   )
 }
