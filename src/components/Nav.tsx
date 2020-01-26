@@ -38,7 +38,12 @@ const Nav: React.FC = () => {
             },
           })}
         >
-          <NavLink as="span" color="inherit" mt={[1, 0]}>
+          <NavLink
+            as="span"
+            color="inherit"
+            mt={[1, 0]}
+            sx={{ fontSize: [2, 2, 3] }}
+          >
             {name}
           </NavLink>
         </Link>
