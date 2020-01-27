@@ -116,7 +116,7 @@ const Home = () => (
           <Grid
             mt={4}
             columns={[3, 4]}
-            gap={[3, 4, 5]}
+            gap={[3, 4]}
             sx={{ alignItems: 'center' }}
           >
             <IconLink
